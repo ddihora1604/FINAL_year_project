@@ -1,0 +1,13 @@
+pandas
+numpy
+sentence-transformers
+faiss-cpu
+scikit-learn
+torch
+transformers
+tokenizers
+huggingface-hub
+streamlit==1.28.1
+google-generativeai==0.3.2
+python-dotenv==1.0.0
+cerebras-cloud-sdk
