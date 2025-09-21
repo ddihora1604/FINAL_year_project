@@ -64,21 +64,70 @@ def run_chatbot():
             print(f"\n🤖 Assistant: {chat_result['llm_response']}")
             
             # Optionally show sources
-            show_sources = input("\n📚 Show source documents? (y/n): ").strip().lower()
+            show_sources = input("\n📚 Show detailed case history? (y/n): ").strip().lower()
             if show_sources in ['y', 'yes']:
-                print("\n📊 Sources:")
-                print("-" * 30)
+                print("\n" + "="*80)
+                print("📊 DETAILED HISTORICAL CASES")
+                print("="*80)
                 
                 for i, result in enumerate(chat_result['search_results'][:3], 1):
                     metadata = result['metadata']
-                    print(f"\n{i}. Similarity: {result['score']:.4f}")
+                    print(f"\n🔍 CASE {i} - Similarity: {result['score']:.4f}")
+                    print("-" * 60)
                     
-                    if 'ticket_description' in metadata:
-                        print(f"   Issue: {metadata['ticket_description'][:100]}...")
-                        print(f"   Answer: {metadata['answer'][:100]}...")
+                    if 'ticket_description' in metadata and 'answer' in metadata:
+                        original_data = metadata.get('original_data', {})
+                        
+                        # Customer Information
+                        print("👤 CUSTOMER DETAILS:")
+                        if 'Customer Name' in original_data:
+                            print(f"   Name: {original_data['Customer Name']}")
+                        if 'Customer Email' in original_data:
+                            print(f"   Email: {original_data['Customer Email']}")
+                        if 'Customer Age' in original_data:
+                            print(f"   Age: {original_data['Customer Age']}")
+                        if 'Customer Gender' in original_data:
+                            print(f"   Gender: {original_data['Customer Gender']}")
+                        if 'Product Purchased' in original_data:
+                            print(f"   Product: {original_data['Product Purchased']}")
+                        if 'Date of Purchase' in original_data:
+                            print(f"   Purchase Date: {original_data['Date of Purchase']}")
+                        
+                        # Ticket Information
+                        print("\n🎫 TICKET DETAILS:")
+                        if 'Ticket ID' in original_data:
+                            print(f"   Ticket ID: {original_data['Ticket ID']}")
+                        if 'Ticket Type' in original_data:
+                            print(f"   Type: {original_data['Ticket Type']}")
+                        if 'Ticket Priority' in original_data:
+                            print(f"   Priority: {original_data['Ticket Priority']}")
+                        if 'Ticket Channel' in original_data:
+                            print(f"   Channel: {original_data['Ticket Channel']}")
+                        if 'Ticket Status' in original_data:
+                            print(f"   Status: {original_data['Ticket Status']}")
+                        
+                        # Issue and Resolution
+                        print(f"\n🔍 ISSUE:")
+                        print(f"   {metadata['ticket_description']}")
+                        print(f"\n✅ RESOLUTION:")
+                        print(f"   {metadata['answer']}")
+                        
+                        # Performance Metrics
+                        print("\n📊 METRICS:")
+                        if 'First Response Time' in original_data:
+                            print(f"   First Response: {original_data['First Response Time']}")
+                        if 'Time to Resolution' in original_data:
+                            print(f"   Resolution Time: {original_data['Time to Resolution']}")
+                        if 'Customer Satisfaction Rating' in original_data:
+                            rating = original_data['Customer Satisfaction Rating']
+                            stars = "⭐" * int(float(rating)) if str(rating).replace('.','').isdigit() else rating
+                            print(f"   Satisfaction: {stars} ({rating}/5)")
+                        
                     elif 'original_query' in metadata:
-                        print(f"   Query: {metadata['original_query'][:100]}...")
-                        print(f"   Response: {metadata['original_response'][:100]}...")
+                        print(f"   Query: {metadata['original_query'][:200]}...")
+                        print(f"   Response: {metadata['original_response'][:200]}...")
+                    
+                    print("\n" + "-" * 60)
             
             print("\n" + "="*50)
     

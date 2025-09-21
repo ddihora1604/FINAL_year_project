@@ -257,41 +257,82 @@ class RAGPipeline:
     
     def generate_response_with_cerebras(self, query: str, context_results: List[Dict]) -> str:
         """
-        Generate a response using Cerebras LLM with retrieved context
+        Generate a response using Cerebras LLM with retrieved context including customer details
         """
         if not self.use_cerebras:
             return "Cerebras LLM is not available. Please check your API key configuration."
         
-        # Prepare context from retrieved results
+        # Prepare detailed context from retrieved results for customer support agents
         context_text = ""
         for i, result in enumerate(context_results[:3], 1):  # Use top 3 results
             metadata = result['metadata']
+            
             if 'ticket_description' in metadata and 'answer' in metadata:
-                context_text += f"\nExample {i}:\n"
-                context_text += f"Customer Issue: {metadata['ticket_description']}\n"
-                context_text += f"Support Answer: {metadata['answer']}\n"
+                original_data = metadata.get('original_data', {})
+                
+                context_text += f"\n=== CASE {i} (Similarity: {result['score']:.3f}) ===\n"
+                
+                # Customer Information
+                if 'Customer Name' in original_data:
+                    context_text += f"Customer: {original_data['Customer Name']}"
+                if 'Customer Email' in original_data:
+                    context_text += f" ({original_data['Customer Email']})"
+                if 'Customer Age' in original_data:
+                    context_text += f", Age: {original_data['Customer Age']}"
+                if 'Customer Gender' in original_data:
+                    context_text += f", Gender: {original_data['Customer Gender']}"
+                context_text += "\n"
+                
+                # Ticket Information
+                if 'Ticket ID' in original_data:
+                    context_text += f"Ticket ID: {original_data['Ticket ID']}\n"
+                if 'Date of Purchase' in original_data:
+                    context_text += f"Purchase Date: {original_data['Date of Purchase']}\n"
+                if 'Product Purchased' in original_data:
+                    context_text += f"Product: {original_data['Product Purchased']}\n"
+                if 'Ticket Type' in original_data:
+                    context_text += f"Ticket Type: {original_data['Ticket Type']}\n"
+                if 'Ticket Priority' in original_data:
+                    context_text += f"Priority: {original_data['Ticket Priority']}\n"
+                if 'Ticket Channel' in original_data:
+                    context_text += f"Channel: {original_data['Ticket Channel']}\n"
+                if 'Ticket Status' in original_data:
+                    context_text += f"Status: {original_data['Ticket Status']}\n"
+                
+                # Issue and Resolution
+                context_text += f"Issue: {metadata['ticket_description']}\n"
+                context_text += f"Resolution: {metadata['answer']}\n"
+                
+                # Resolution Details
+                if 'First Response Time' in original_data:
+                    context_text += f"First Response Time: {original_data['First Response Time']}\n"
+                if 'Time to Resolution' in original_data:
+                    context_text += f"Time to Resolution: {original_data['Time to Resolution']}\n"
+                if 'Customer Satisfaction Rating' in original_data:
+                    rating = original_data['Customer Satisfaction Rating']
+                    context_text += f"Customer Satisfaction: {rating}/5 stars\n"
+                
             elif 'original_query' in metadata and 'original_response' in metadata:
-                context_text += f"\nExample {i}:\n"
-                context_text += f"Customer Query: {metadata['original_query']}\n"
-                context_text += f"Support Response: {metadata['original_response']}\n"
+                context_text += f"\n=== CASE {i} (Similarity: {result['score']:.3f}) ===\n"
+                context_text += f"Previous Query: {metadata['original_query']}\n"
+                context_text += f"Previous Response: {metadata['original_response']}\n"
         
-        # Create prompt for Cerebras
-        prompt = f"""You are a helpful customer support assistant. Based on the following similar support cases, provide a clear and helpful response to the customer's question.
+        # Create enhanced prompt for customer support agents
+        prompt = f"""You are an AI assistant helping customer support personnel. Based on the historical cases provided below, give a helpful response to the current customer question.
 
-Customer Question: {query}
+CURRENT CUSTOMER QUESTION: {query}
 
-Similar Support Cases:
+HISTORICAL CASES FROM DATABASE:
 {context_text}
 
-Instructions:
-1. Analyze the customer's question carefully
-2. Use the similar support cases as reference to understand common solutions
-3. Provide a clear, helpful, and professional response
-4. If the question is not well covered by the examples, provide general guidance and suggest contacting support
-5. Keep your response concise but comprehensive
-6. Use a friendly and professional tone
+CRITICAL INSTRUCTIONS:
+- Use ONLY the actual customer names and data from the historical cases above
+- DO NOT invent, create, or use placeholder names like "John Doe", "Jane Smith", etc.
+- If you reference a customer, use their EXACT name as it appears in the historical data
+- Reference actual ticket IDs, resolution times, and satisfaction ratings from the cases
+- Base your response only on the real data provided above
 
-Response:"""
+Provide a helpful response based solely on the actual historical data shown:"""
 
         try:
             # Generate response using Cerebras
@@ -304,7 +345,7 @@ Response:"""
                 ],
                 model=self.cerebras_model,
                 temperature=0.7,
-                max_tokens=1024
+                max_tokens=1500  # Increased for more detailed responses
             )
             
             return chat_completion.choices[0].message.content

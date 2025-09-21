@@ -63,33 +63,62 @@ def display_chat_message(message, is_user=True):
 
 def format_search_results(results: List[Dict], in_expander=False) -> None:
     """
-    Display search results in a formatted way
+    Display search results in a formatted way with enhanced customer context
     """
     if not in_expander:
-        st.subheader("📊 Retrieved Knowledge Base Results")
+        st.subheader("📊 Retrieved Historical Cases")
     
     for i, result in enumerate(results):
         # Use different display format when already inside an expander
         if in_expander:
-            st.markdown(f"**📄 Result {result['rank']} - Similarity: {result['score']:.4f}**")
+            st.markdown(f"**📄 Case {result['rank']} - Similarity: {result['score']:.4f}**")
             metadata = result['metadata']
             
             if 'ticket_description' in metadata and 'answer' in metadata:
-                col1, col2 = st.columns([1, 1])
+                original_data = metadata.get('original_data', {})
                 
+                # Customer Info
+                if 'Customer Name' in original_data or 'Customer Email' in original_data:
+                    customer_info = []
+                    if 'Customer Name' in original_data:
+                        customer_info.append(f"**Customer:** {original_data['Customer Name']}")
+                    if 'Customer Email' in original_data:
+                        customer_info.append(f"**Email:** {original_data['Customer Email']}")
+                    if 'Customer Age' in original_data:
+                        customer_info.append(f"**Age:** {original_data['Customer Age']}")
+                    if 'Product Purchased' in original_data:
+                        customer_info.append(f"**Product:** {original_data['Product Purchased']}")
+                    
+                    st.markdown(" | ".join(customer_info))
+                
+                # Ticket Details
+                if 'Date of Purchase' in original_data:
+                    st.markdown(f"**Purchase Date:** {original_data['Date of Purchase']}")
+                if 'Ticket Type' in original_data and 'Ticket Priority' in original_data:
+                    st.markdown(f"**Type:** {original_data['Ticket Type']} | **Priority:** {original_data['Ticket Priority']}")
+                
+                # Issue and Solution
+                col1, col2 = st.columns([1, 1])
                 with col1:
-                    st.write("**🎫 Customer Issue:**")
+                    st.write("**🎫 Issue:**")
                     st.write(metadata['ticket_description'][:150] + "..." if len(metadata['ticket_description']) > 150 else metadata['ticket_description'])
                 
                 with col2:
-                    st.write("**✅ Support Answer:**")
+                    st.write("**✅ Resolution:**")
                     st.write(metadata['answer'][:150] + "..." if len(metadata['answer']) > 150 else metadata['answer'])
+                
+                # Performance Metrics
+                if 'Customer Satisfaction Rating' in original_data:
+                    rating = original_data['Customer Satisfaction Rating']
+                    stars = "⭐" * int(rating) if pd.notna(rating) and str(rating).replace('.', '').isdigit() else "N/A"
+                    resolution_time = original_data.get('Time to Resolution', 'N/A')
+                    st.markdown(f"**Satisfaction:** {stars} ({rating}) | **Resolution Time:** {resolution_time}")
                 
                 st.markdown("---")
             
             elif 'original_query' in metadata and 'original_response' in metadata:
-                st.write("**Customer Query:**", metadata['original_query'][:100] + "...")
-                st.write("**Support Response:**", metadata['original_response'][:100] + "...")
+                st.write("**Query:**", metadata['original_query'][:100] + "...")
+                st.write("**Response:**", metadata['original_response'][:100] + "...")
                 st.markdown("---")
             
             else:
@@ -99,43 +128,78 @@ def format_search_results(results: List[Dict], in_expander=False) -> None:
         
         else:
             # Use expanders only when not already inside one
-            with st.expander(f"📄 Result {result['rank']} - Similarity: {result['score']:.4f}", expanded=i<2):
+            with st.expander(f"📄 Case {result['rank']} - Similarity: {result['score']:.4f}", expanded=i<2):
                 metadata = result['metadata']
                 
                 if 'ticket_description' in metadata and 'answer' in metadata:
-                    col1, col2 = st.columns([1, 1])
+                    original_data = metadata.get('original_data', {})
+                    
+                    # Customer Information Section
+                    st.subheader("👤 Customer Information")
+                    col1, col2, col3 = st.columns([1, 1, 1])
                     
                     with col1:
-                        st.write("**🎫 Original Customer Issue:**")
-                        st.write(metadata['ticket_description'])
+                        if 'Customer Name' in original_data:
+                            st.write(f"**Name:** {original_data['Customer Name']}")
+                        if 'Customer Age' in original_data:
+                            st.write(f"**Age:** {original_data['Customer Age']}")
+                        if 'Customer Gender' in original_data:
+                            st.write(f"**Gender:** {original_data['Customer Gender']}")
                     
                     with col2:
-                        st.write("**✅ Support Team Answer:**")
-                        st.write(metadata['answer'])
+                        if 'Customer Email' in original_data:
+                            st.write(f"**Email:** {original_data['Customer Email']}")
+                        if 'Product Purchased' in original_data:
+                            st.write(f"**Product:** {original_data['Product Purchased']}")
+                        if 'Date of Purchase' in original_data:
+                            st.write(f"**Purchase Date:** {original_data['Date of Purchase']}")
                     
-                    # Display additional metadata if available
-                    if 'original_data' in metadata:
-                        st.markdown("**ℹ️ Additional Details:**")
-                        data = metadata['original_data']
-                        col_meta1, col_meta2 = st.columns(2)
-                        
-                        with col_meta1:
-                            if 'Ticket Type' in data:
-                                st.write(f"**Ticket Type:** {data['Ticket Type']}")
-                            if 'Ticket Priority' in data:
-                                st.write(f"**Priority:** {data['Ticket Priority']}")
-                            if 'Product Purchased' in data:
-                                st.write(f"**Product:** {data['Product Purchased']}")
-                        
-                        with col_meta2:
-                            if 'Customer Satisfaction Rating' in data:
-                                rating = data['Customer Satisfaction Rating']
-                                stars = "⭐" * int(rating) if pd.notna(rating) else "N/A"
-                                st.write(f"**Satisfaction:** {stars} ({rating})")
-                            if 'Ticket Status' in data:
-                                st.write(f"**Status:** {data['Ticket Status']}")
-                            if 'Ticket Channel' in data:
-                                st.write(f"**Channel:** {data['Ticket Channel']}")
+                    with col3:
+                        if 'Ticket ID' in original_data:
+                            st.write(f"**Ticket ID:** {original_data['Ticket ID']}")
+                        if 'Ticket Channel' in original_data:
+                            st.write(f"**Channel:** {original_data['Ticket Channel']}")
+                        if 'Ticket Status' in original_data:
+                            st.write(f"**Status:** {original_data['Ticket Status']}")
+                    
+                    # Ticket Details Section
+                    st.subheader("🎫 Ticket Details")
+                    col_ticket1, col_ticket2 = st.columns([1, 1])
+                    
+                    with col_ticket1:
+                        if 'Ticket Type' in original_data:
+                            st.write(f"**Type:** {original_data['Ticket Type']}")
+                        if 'Ticket Priority' in original_data:
+                            priority = original_data['Ticket Priority']
+                            priority_color = {"High": "🔴", "Medium": "🟡", "Low": "🟢"}.get(priority, "")
+                            st.write(f"**Priority:** {priority_color} {priority}")
+                    
+                    with col_ticket2:
+                        if 'First Response Time' in original_data:
+                            st.write(f"**First Response:** {original_data['First Response Time']}")
+                        if 'Time to Resolution' in original_data:
+                            st.write(f"**Resolution Time:** {original_data['Time to Resolution']}")
+                    
+                    # Issue and Resolution Section
+                    st.subheader("🔍 Issue & Resolution")
+                    
+                    st.write("**🎫 Customer Issue:**")
+                    st.write(metadata['ticket_description'])
+                    
+                    st.write("**✅ Support Resolution:**")
+                    st.write(metadata['answer'])
+                    
+                    # Performance Metrics
+                    if 'Customer Satisfaction Rating' in original_data:
+                        st.subheader("📊 Performance Metrics")
+                        rating = original_data['Customer Satisfaction Rating']
+                        if pd.notna(rating) and str(rating).replace('.', '').isdigit():
+                            rating_float = float(rating)
+                            stars = "⭐" * int(rating_float)
+                            color = "green" if rating_float >= 4 else "orange" if rating_float >= 3 else "red"
+                            st.markdown(f"**Customer Satisfaction:** :{color}[{stars} ({rating}/5)]")
+                        else:
+                            st.write(f"**Customer Satisfaction:** {rating}")
                 
                 elif 'original_query' in metadata and 'original_response' in metadata:
                     st.write("**Original Customer Query:**")
@@ -301,7 +365,7 @@ def main():
         st.session_state.messages = [{
             "role": "assistant",
             "content": "Hello! I'm your customer support assistant. How can I help you today?",
-            "sources": None
+            "sources"j: None
         }]
         st.experimental_rerun()
     
