@@ -54,6 +54,17 @@ class RAGConfig:
     chunk_size: int = 512
     chunk_overlap: int = 50
 
+@dataclass
+class ChatMessage:
+    """Represents a single message in the conversation"""
+    role: str  # 'user' or 'assistant'
+    content: str
+    timestamp: datetime = None
+    
+    def __post_init__(self):
+        if self.timestamp is None:
+            self.timestamp = datetime.now()
+
 class DocumentProcessor:
     """Handles document preprocessing and chunking"""
     
@@ -232,7 +243,38 @@ class RAGPipeline:
         # Add similarity threshold for filtering relevant queries
         self.similarity_threshold = 0.1
         
-        logger.info("RAG Pipeline initialized")
+        # Initialize conversation memory
+        self.conversation_history: List[ChatMessage] = []
+        self.max_history_length = 10  # Keep last 10 messages
+        
+        logger.info("RAG Pipeline initialized with conversation memory")
+    
+    def add_to_history(self, role: str, content: str):
+        """Add a message to conversation history"""
+        message = ChatMessage(role=role, content=content)
+        self.conversation_history.append(message)
+        
+        # Trim history if it exceeds max length
+        if len(self.conversation_history) > self.max_history_length:
+            self.conversation_history = self.conversation_history[-self.max_history_length:]
+        
+        logger.info(f"Added {role} message to history. Total messages: {len(self.conversation_history)}")
+    
+    def clear_history(self):
+        """Clear conversation history"""
+        self.conversation_history = []
+        logger.info("Conversation history cleared")
+    
+    def get_conversation_context(self) -> str:
+        """Format conversation history as context string"""
+        if not self.conversation_history:
+            return ""
+        
+        context = "PREVIOUS CONVERSATION:\n\n"
+        for msg in self.conversation_history:
+            context += f"{msg.role.upper()}: {msg.content}\n\n"
+        
+        return context + "-" * 50 + "\n\n"
     
     def load_csv_data(self, csv_path: str) -> pd.DataFrame:
         """Load and validate CSV data"""
@@ -317,7 +359,7 @@ class RAGPipeline:
         return results
     
     def generate_response(self, query: str, context_docs: List[Dict]) -> str:
-        """Generate response using OpenRouter API"""
+        """Generate response using OpenRouter API with conversation history"""
         # Prepare context - extract information more effectively
         context_sections = []
         
@@ -389,11 +431,16 @@ class RAGPipeline:
             context_text += f"Relevance Score: {section['similarity']:.3f}\n"
             context_text += "-" * 50 + "\n\n"
         
-        # Simple, raw system prompt
-        system_prompt = "You are a customer support assistant. Use the provided support cases to help answer the customer's question. Be helpful and direct."
+        # Get conversation history
+        conversation_context = self.get_conversation_context()
         
-        # Simple, raw user prompt
-        user_prompt = f"{context_text}CUSTOMER QUESTION: {query}\n\nYOUR RESPONSE:"
+        # Build system prompt - now includes instruction to use conversation history
+        system_prompt = """You are a customer support assistant. Use the provided support cases and previous conversation to help answer the customer's question. 
+Be helpful, direct, and maintain context from previous messages in the conversation.
+If the customer refers to something discussed earlier, acknowledge it."""
+        
+        # Build user prompt with conversation history
+        user_prompt = f"{conversation_context}{context_text}CUSTOMER QUESTION: {query}\n\nYOUR RESPONSE:"
         
         try:
             if OPENAI_V1:
@@ -427,7 +474,7 @@ class RAGPipeline:
                 )
                 response = completion.choices[0].message.content
             
-            logger.info("Response generated successfully")
+            logger.info("Response generated successfully with conversation context")
             return response
             
         except Exception as e:
@@ -435,35 +482,47 @@ class RAGPipeline:
             return f"Error generating response: {e}"
     
     def query(self, question: str, top_k: int = None) -> Dict[str, Any]:
-        """Main query interface"""
+        """Main query interface with conversation memory"""
         start_time = datetime.now()
+        
+        # Add user question to history
+        self.add_to_history("user", question)
         
         # Retrieve relevant context
         relevant_docs = self.retrieve_relevant_context(question, top_k)
         
         if not relevant_docs:
+            response_text = "No relevant information found."
+            self.add_to_history("assistant", response_text)
             return {
                 'question': question,
-                'answer': "No relevant information found.",
+                'answer': response_text,
                 'sources': [],
                 'processing_time': (datetime.now() - start_time).total_seconds(),
-                'relevant': False
+                'relevant': False,
+                'conversation_length': len(self.conversation_history)
             }
         
         # Filter by similarity threshold
         filtered_docs = [doc for doc in relevant_docs if doc.get('similarity_score', 0.0) >= self.similarity_threshold]
         
         if not filtered_docs:
+            response_text = "No sufficiently relevant information found."
+            self.add_to_history("assistant", response_text)
             return {
                 'question': question,
-                'answer': "No sufficiently relevant information found.",
+                'answer': response_text,
                 'sources': [],
                 'processing_time': (datetime.now() - start_time).total_seconds(),
-                'relevant': False
+                'relevant': False,
+                'conversation_length': len(self.conversation_history)
             }
         
-        # Generate response
+        # Generate response with conversation context
         answer = self.generate_response(question, filtered_docs)
+        
+        # Add assistant response to history
+        self.add_to_history("assistant", answer)
         
         # Prepare sources
         sources = []
@@ -483,12 +542,13 @@ class RAGPipeline:
             'answer': answer,
             'sources': sources,
             'processing_time': processing_time,
-            'relevant': True
+            'relevant': True,
+            'conversation_length': len(self.conversation_history)
         }
     
     def chat(self):
-        """Simple chat interface"""
-        print("RAG Pipeline Chat - Type 'quit' to exit")
+        """Simple chat interface with conversation memory"""
+        print("RAG Pipeline Chat - Type 'quit' to exit, 'clear' to clear history, 'history' to view conversation")
         
         while True:
             try:
@@ -497,9 +557,21 @@ class RAGPipeline:
                 if user_input.lower() in ['quit', 'exit']:
                     break
                 
+                if user_input.lower() == 'clear':
+                    self.clear_history()
+                    print("Conversation history cleared.")
+                    continue
+                
+                if user_input.lower() == 'history':
+                    print("\n" + "="*50)
+                    print(self.get_conversation_context())
+                    print("="*50)
+                    continue
+                
                 result = self.query(user_input)
                 print(f"\nAnswer: {result['answer']}")
                 print(f"Processing time: {result['processing_time']:.2f}s")
+                print(f"Conversation messages: {result['conversation_length']}")
                 
             except KeyboardInterrupt:
                 break
@@ -513,7 +585,7 @@ def main():
         rag = RAGPipeline()
         
         # CSV path
-        csv_path = r"c:\Tejas\BE Project\CODEBASE\BE-Project\RAG-Pipeline-Ollama\customer_support_tickets_sample_1500_balanced.csv"
+        csv_path = r"c:\Tejas\BE Project\CODEBASE\BE-Project\RAG-Pipeline-Ollama\customer_support_tickets_updated.csv"
         
         # Check if knowledge base exists
         kb_path = "customer_support_kb"
