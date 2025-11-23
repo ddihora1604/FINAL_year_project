@@ -1,0 +1,12 @@
+# Cerebras API Configuration
+CEREBRAS_API_KEY=csk-y6cwvwnrx32jjr6ref3yxk82pe3fr93dmp94ff8wt96j6djd
+
+# Gemini API Configuration (backup)
+GEMINI_API_KEY=AIzaSyAgNRQ9H5xiwmA6dtddkADeipgPn-Tbqug
+
+# Optional: Model configuration
+GEMINI_MODEL=gemini-2.5-flash
+TEMPERATURE=0.7
+MAX_OUTPUT_TOKENS=1024
+
+OPEN_ROUTER_API_KEY=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

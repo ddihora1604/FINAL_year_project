@@ -180,7 +180,11 @@ class VectorStore:
         for score, idx in zip(scores[0], indices[0]):
             if idx < len(self.documents):
                 result = self.documents[idx].copy()
-                result['similarity_score'] = float(score)
+                # Handle NaN and infinity values
+                score_value = float(score)
+                if np.isnan(score_value) or np.isinf(score_value):
+                    score_value = 0.0
+                result['similarity_score'] = score_value
                 results.append(result)
         
         return results
@@ -223,8 +227,9 @@ class RAGPipeline:
     def __init__(self, config: RAGConfig = None, enable_monitoring: bool = True):
         self.config = config or RAGConfig()
         
-        # Load environment variables
-        load_dotenv()
+        # Load environment variables from project root
+        env_path = Path(__file__).parent.parent / '.env'
+        load_dotenv(dotenv_path=env_path)
         
         # Initialize OpenRouter client based on OpenAI version
         if OPENAI_V1:

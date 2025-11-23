@@ -1,0 +1,53 @@
+{
+  "conversation_id": "conv_1763917373309",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi",
+      "timestamp": "2025-11-23T22:32:58.471982"
+    },
+    {
+      "role": "assistant",
+      "content": "Error generating response: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'meta-llama/llama-3.2-3b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Venice'}}, 'user_id': 'user_2r4n88NCetVIhflCOgieYrz2vnh'}",
+      "timestamp": "2025-11-23T22:32:58.471982",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.25106340646743774,
+          "text_preview": "full picture. Looking forward to hearing from you! Best regards, Your Name Customer: [NAME REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Philips Hue Lights",
+          "similarity_score": 0.24518674612045288,
+          "text_preview": "hilips Hue app and firmware to the latest version. If you re still experiencing issues, please reply with: - The specific model s purchased - Any error messages in the app - Whether the lights blink o..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Kindle",
+          "similarity_score": 0.22894951701164246,
+          "text_preview": "6 Dear Customer, Thank you for reaching out to us. We understand that this situation is frustrating, and we sincerely apologize for the delays and lack of resolution in your previous interactions with..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.21931686997413635,
+          "text_preview": "full picture. Looking forward to hearing from you! Best regards, Your Support Team Name Customer: [NAME REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nintendo Switch",
+          "similarity_score": 0.2121388465166092,
+          "text_preview": "hich titles are affected so we can assist further. At this time, refunds are not applicable for software-related errors that can be resolved through troubleshooting. However, we re committed to helpin..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-23T22:32:53.309142",
+  "updated_at": "2025-11-23T22:32:58.471982"
+}
