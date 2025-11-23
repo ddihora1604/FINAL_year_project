@@ -1,0 +1,252 @@
+{
+  "dashboard": {
+    "title": "RAG Pipeline - Security Operations",
+    "tags": ["rag", "security", "operations"],
+    "timezone": "browser",
+    "schemaVersion": 38,
+    "version": 1,
+    "refresh": "10s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Real-time Attack Timeline (1h)",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 0, "w": 24, "h": 8},
+        "targets": [
+          {
+            "expr": "sum by (attack_type) (rate(rag_security_attacks_total[1m])) * 60",
+            "refId": "A",
+            "legendFormat": "{{attack_type}}"
+          }
+        ],
+        "options": {
+          "tooltip": {
+            "mode": "multi",
+            "sort": "desc"
+          },
+          "legend": {
+            "displayMode": "table",
+            "placement": "right",
+            "showLegend": true,
+            "calcs": ["lastNotNull", "max", "mean"]
+          }
+        },
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "lineWidth": 2,
+              "fillOpacity": 20,
+              "showPoints": "auto",
+              "axisPlacement": "auto",
+              "stacking": {"mode": "none"}
+            },
+            "color": {"mode": "palette-classic"},
+            "unit": "attpm",
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "title": "PII Redaction by Entity Type",
+        "type": "bargauge",
+        "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum by (entity_type) (increase(rag_security_pii_redacted_total[1h]))",
+            "refId": "A",
+            "legendFormat": "{{entity_type}}"
+          }
+        ],
+        "options": {
+          "orientation": "horizontal",
+          "displayMode": "gradient",
+          "showUnfilled": true,
+          "text": {
+            "valueSize": 16
+          }
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "continuous-GrYlRd"
+            },
+            "unit": "short",
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": null, "color": "green"},
+                {"value": 10, "color": "yellow"},
+                {"value": 50, "color": "red"}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 3,
+        "title": "Attack Type Distribution",
+        "type": "piechart",
+        "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum by (attack_type) (increase(rag_security_attacks_total[24h]))",
+            "refId": "A",
+            "legendFormat": "{{attack_type}}"
+          }
+        ],
+        "options": {
+          "legend": {
+            "displayMode": "table",
+            "placement": "right",
+            "showLegend": true,
+            "values": ["value", "percent"]
+          },
+          "pieType": "donut",
+          "tooltip": {
+            "mode": "single"
+          },
+          "displayLabels": ["name", "percent"]
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "palette-classic"},
+            "unit": "short"
+          }
+        }
+      },
+      {
+        "id": 4,
+        "title": "Blocked vs Allowed Queries",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 16, "w": 24, "h": 8},
+        "targets": [
+          {
+            "expr": "sum(rate(rag_queries_total{status=\"success\"}[5m])) * 60",
+            "refId": "A",
+            "legendFormat": "Allowed (Success)"
+          },
+          {
+            "expr": "sum(rate(rag_queries_total{status=\"blocked\"}[5m])) * 60",
+            "refId": "B",
+            "legendFormat": "Blocked"
+          },
+          {
+            "expr": "sum(rate(rag_queries_total{status=\"no_context\"}[5m])) * 60",
+            "refId": "C",
+            "legendFormat": "No Context"
+          }
+        ],
+        "options": {
+          "tooltip": {
+            "mode": "multi",
+            "sort": "desc"
+          },
+          "legend": {
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          }
+        },
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 50,
+              "showPoints": "never",
+              "stacking": {"mode": "normal"}
+            },
+            "color": {"mode": "palette-classic"},
+            "unit": "reqpm",
+            "min": 0
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "Allowed (Success)"},
+              "properties": [
+                {"id": "color", "value": {"fixedColor": "green", "mode": "fixed"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "Blocked"},
+              "properties": [
+                {"id": "color", "value": {"fixedColor": "red", "mode": "fixed"}}
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "title": "Recent Security Events",
+        "type": "table",
+        "gridPos": {"x": 0, "y": 24, "w": 24, "h": 8},
+        "targets": [
+          {
+            "expr": "sort_desc(sum by (attack_type) (increase(rag_security_attacks_total[5m])))",
+            "refId": "A",
+            "instant": true,
+            "format": "table"
+          }
+        ],
+        "options": {
+          "showHeader": true,
+          "sortBy": [
+            {
+              "displayName": "Value",
+              "desc": true
+            }
+          ]
+        },
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "align": "auto",
+              "filterable": true
+            },
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": null, "color": "green"},
+                {"value": 1, "color": "yellow"},
+                {"value": 5, "color": "red"}
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "attack_type"},
+              "properties": [
+                {"id": "displayName", "value": "Attack Type"}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "Value"},
+              "properties": [
+                {"id": "displayName", "value": "Count (Last 5m)"},
+                {"id": "unit", "value": "short"}
+              ]
+            }
+          ]
+        },
+        "transformations": [
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "Time": true
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

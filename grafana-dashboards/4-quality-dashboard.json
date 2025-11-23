@@ -1,0 +1,330 @@
+{
+  "dashboard": {
+    "title": "RAG Pipeline - Quality Dashboard",
+    "tags": ["rag", "quality", "accuracy"],
+    "timezone": "browser",
+    "schemaVersion": 38,
+    "version": 1,
+    "refresh": "30s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Average Similarity Score",
+        "type": "gauge",
+        "gridPos": {"x": 0, "y": 0, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "sum(rate(rag_similarity_score_sum[5m])) / sum(rate(rag_similarity_score_count[5m]))",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "showThresholdLabels": true,
+          "showThresholdMarkers": true
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "thresholds"},
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": null, "color": "red"},
+                {"value": 0.5, "color": "yellow"},
+                {"value": 0.7, "color": "green"}
+              ]
+            },
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1,
+            "decimals": 3
+          }
+        }
+      },
+      {
+        "id": 2,
+        "title": "Refusal Rate",
+        "type": "stat",
+        "gridPos": {"x": 8, "y": 0, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "sum(rate(rag_content_refusals_total[5m])) / sum(rate(rag_queries_total[5m])) * 100",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "reduceOptions": {
+            "values": false,
+            "calcs": ["lastNotNull"]
+          },
+          "textMode": "value_and_name",
+          "graphMode": "area",
+          "colorMode": "value",
+          "text": {"titleSize": 16, "valueSize": 40}
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "thresholds"},
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": null, "color": "green"},
+                {"value": 10, "color": "yellow"},
+                {"value": 25, "color": "red"}
+              ]
+            },
+            "unit": "percent",
+            "decimals": 2
+          }
+        }
+      },
+      {
+        "id": 3,
+        "title": "Conversation Length",
+        "type": "stat",
+        "gridPos": {"x": 16, "y": 0, "w": 8, "h": 8},
+        "targets": [
+          {
+            "expr": "rag_conversation_history_length",
+            "refId": "A"
+          }
+        ],
+        "options": {
+          "reduceOptions": {
+            "values": false,
+            "calcs": ["lastNotNull"]
+          },
+          "textMode": "value_and_name",
+          "graphMode": "area",
+          "colorMode": "value",
+          "text": {"titleSize": 16, "valueSize": 40}
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "thresholds"},
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": null, "color": "blue"}
+              ]
+            },
+            "unit": "short",
+            "decimals": 0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "title": "Similarity Score Distribution",
+        "type": "histogram",
+        "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum(increase(rag_similarity_score_bucket[5m])) by (le)",
+            "refId": "A",
+            "format": "heatmap",
+            "legendFormat": "{{le}}"
+          }
+        ],
+        "options": {
+          "legend": {
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          }
+        },
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "bars",
+              "barAlignment": 0,
+              "fillOpacity": 100,
+              "showPoints": "never"
+            },
+            "color": {"mode": "palette-classic"},
+            "unit": "short"
+          }
+        }
+      },
+      {
+        "id": 5,
+        "title": "Query Status Breakdown",
+        "type": "barchart",
+        "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "sum by (status) (increase(rag_queries_total[1h]))",
+            "refId": "A",
+            "legendFormat": "{{status}}"
+          }
+        ],
+        "options": {
+          "orientation": "horizontal",
+          "xTickLabelRotation": 0,
+          "showValue": "always",
+          "stacking": "normal",
+          "legend": {
+            "displayMode": "list",
+            "placement": "right",
+            "showLegend": true
+          }
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "palette-classic"},
+            "unit": "short",
+            "custom": {
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "fillOpacity": 80
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "success"},
+              "properties": [
+                {"id": "color", "value": {"fixedColor": "green", "mode": "fixed"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "blocked"},
+              "properties": [
+                {"id": "color", "value": {"fixedColor": "red", "mode": "fixed"}}
+              ]
+            },
+            {
+              "matcher": {"id": "byName", "options": "no_context"},
+              "properties": [
+                {"id": "color", "value": {"fixedColor": "yellow", "mode": "fixed"}}
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "title": "Conversation Length Trend",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 16, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "rag_conversation_history_length",
+            "refId": "A",
+            "legendFormat": "Messages"
+          }
+        ],
+        "options": {
+          "tooltip": {
+            "mode": "single"
+          },
+          "legend": {
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true,
+            "calcs": ["lastNotNull", "mean", "max"]
+          }
+        },
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "lineWidth": 2,
+              "fillOpacity": 20,
+              "showPoints": "auto",
+              "axisPlacement": "auto"
+            },
+            "color": {"mode": "palette-classic"},
+            "unit": "short",
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": 7,
+        "title": "Vector Store Growth",
+        "type": "timeseries",
+        "gridPos": {"x": 12, "y": 16, "w": 12, "h": 8},
+        "targets": [
+          {
+            "expr": "rag_vector_store_documents",
+            "refId": "A",
+            "legendFormat": "Documents"
+          }
+        ],
+        "options": {
+          "tooltip": {
+            "mode": "single"
+          },
+          "legend": {
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true,
+            "calcs": ["lastNotNull", "delta"]
+          }
+        },
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "lineWidth": 2,
+              "fillOpacity": 40,
+              "showPoints": "auto",
+              "axisPlacement": "auto"
+            },
+            "color": {"mode": "palette-classic"},
+            "unit": "short",
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": 8,
+        "title": "Similarity Score Timeline",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 24, "w": 24, "h": 8},
+        "targets": [
+          {
+            "expr": "sum(rate(rag_similarity_score_sum[5m])) / sum(rate(rag_similarity_score_count[5m]))",
+            "refId": "A",
+            "legendFormat": "Average Score"
+          },
+          {
+            "expr": "histogram_quantile(0.95, sum(rate(rag_similarity_score_bucket[5m])) by (le))",
+            "refId": "B",
+            "legendFormat": "P95 Score"
+          }
+        ],
+        "options": {
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          },
+          "legend": {
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true,
+            "calcs": ["mean", "lastNotNull"]
+          }
+        },
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "lineWidth": 2,
+              "fillOpacity": 10,
+              "showPoints": "never",
+              "axisPlacement": "auto"
+            },
+            "color": {"mode": "palette-classic"},
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1,
+            "decimals": 3
+          }
+        }
+      }
+    ]
+  }
+}
