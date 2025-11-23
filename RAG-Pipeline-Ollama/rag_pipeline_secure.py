@@ -8,6 +8,7 @@ from pathlib import Path
 import pickle
 import json
 from datetime import datetime
+import sys
 
 # External libraries
 try:
@@ -30,6 +31,8 @@ import re
 
 # Add this import at the top after other imports
 from security import SecurityManager
+sys.path.append(r"c:\Tejas\BE Project\CODEBASE\BE-Project\Health-Security-Metrics")
+from instrumentation import RAGMonitor
 
 # Download required NLTK data
 try:
@@ -217,7 +220,7 @@ class VectorStore:
 class RAGPipeline:
     """Main RAG Pipeline class"""
     
-    def __init__(self, config: RAGConfig = None):
+    def __init__(self, config: RAGConfig = None, enable_monitoring: bool = True):
         self.config = config or RAGConfig()
         
         # Load environment variables
@@ -253,7 +256,16 @@ class RAGPipeline:
         # Initialize security manager
         self.security_manager = SecurityManager()
         
-        logger.info("RAG Pipeline initialized with conversation memory and security features")
+        # Initialize monitoring
+        self.monitor = None
+        if enable_monitoring:
+            try:
+                self.monitor = RAGMonitor(port=8000)
+                logger.info("RAG Pipeline initialized with conversation memory, security features, and monitoring")
+            except Exception as e:
+                logger.warning(f"Failed to initialize monitoring: {e}. Continuing without metrics.")
+        else:
+            logger.info("RAG Pipeline initialized with conversation memory and security features (monitoring disabled)")
     
     def add_to_history(self, role: str, content: str, validation_result: Dict[str, Any] = None):
         """Add a message to conversation history with security sanitization"""
@@ -353,6 +365,10 @@ class RAGPipeline:
         # Add to vector store
         self.vector_store.add_documents(documents)
         
+        # Update monitoring
+        if self.monitor:
+            self.monitor.update_vector_store_size(len(self.vector_store.documents))
+        
         # Save if path provided
         if save_path:
             self.vector_store.save(save_path)
@@ -363,6 +379,11 @@ class RAGPipeline:
         """Retrieve relevant context for a query"""
         top_k = top_k or self.config.top_k_results
         results = self.vector_store.search(query, top_k)
+        
+        # Record similarity scores
+        if self.monitor:
+            for result in results:
+                self.monitor.record_similarity_score(result.get('similarity_score', 0.0))
         
         logger.info(f"Retrieved {len(results)} relevant documents for query")
         return results
@@ -500,6 +521,11 @@ If you don't have relevant information, say so."""
             redaction_result = self.security_manager.redact_output(response)
             redacted_response = redaction_result['redacted_text']
             
+            # Record redactions
+            if self.monitor and redaction_result['redaction_applied']:
+                for entity_type in redaction_result['redacted_types']:
+                    self.monitor.record_redaction(entity_type)
+            
             if redaction_result['redaction_applied']:
                 logger.warning(f"⚠️ PII found in LLM response (should be prevented): {redaction_result['redacted_types']}")
             
@@ -521,6 +547,17 @@ If you don't have relevant information, say so."""
             # Input is malicious - block and log
             logger.warning(f"Blocked malicious input: {validation_result['reason']}")
             
+            # Record security metrics
+            if self.monitor:
+                # Determine attack type from patterns
+                patterns = validation_result.get('patterns', [])
+                if any('injection' in p for p in patterns):
+                    self.monitor.record_attack('jailbreak')
+                if any('exfiltration' in p for p in patterns):
+                    self.monitor.record_attack('exfiltration')
+                self.monitor.record_refusal()
+                self.monitor.record_query('blocked')
+            
             # Add sanitized version to history
             self.add_to_history("user", question, validation_result)
             
@@ -531,11 +568,21 @@ If you don't have relevant information, say so."""
             )
             self.add_to_history("assistant", refusal_message)
             
+            # Update conversation length metric
+            if self.monitor:
+                self.monitor.update_conversation_length(len(self.conversation_history))
+            
+            processing_time = (datetime.now() - start_time).total_seconds()
+            
+            # Record latency
+            if self.monitor:
+                self.monitor.record_latency(start_time.timestamp())
+            
             return {
                 'question': "[BLOCKED - Unsafe Input]",
                 'answer': refusal_message,
                 'sources': [],
-                'processing_time': (datetime.now() - start_time).total_seconds(),
+                'processing_time': processing_time,
                 'relevant': False,
                 'conversation_length': len(self.conversation_history),
                 'security_status': 'blocked',
@@ -551,6 +598,14 @@ If you don't have relevant information, say so."""
         if not relevant_docs:
             response_text = "No relevant information found."
             self.add_to_history("assistant", response_text)
+            
+            # Record metrics
+            if self.monitor:
+                self.monitor.record_refusal()
+                self.monitor.record_query('no_context')
+                self.monitor.update_conversation_length(len(self.conversation_history))
+                self.monitor.record_latency(start_time.timestamp())
+            
             return {
                 'question': question,
                 'answer': response_text,
@@ -567,6 +622,14 @@ If you don't have relevant information, say so."""
         if not filtered_docs:
             response_text = "No sufficiently relevant information found."
             self.add_to_history("assistant", response_text)
+            
+            # Record metrics
+            if self.monitor:
+                self.monitor.record_refusal()
+                self.monitor.record_query('no_context')
+                self.monitor.update_conversation_length(len(self.conversation_history))
+                self.monitor.record_latency(start_time.timestamp())
+            
             return {
                 'question': question,
                 'answer': response_text,
@@ -593,13 +656,19 @@ If you don't have relevant information, say so."""
             redacted_preview = self.security_manager.redact_output(text_preview)['redacted_text']
             
             sources.append({
-                'ticket_id': '[REDACTED]',  # Always redact ticket IDs in sources
+                'ticket_id': '[REDACTED]',
                 'product': metadata.get('product', '[REDACTED]'),
                 'similarity_score': doc.get('similarity_score', 0.0),
                 'text_preview': redacted_preview
             })
         
         processing_time = (datetime.now() - start_time).total_seconds()
+        
+        # Record successful query metrics
+        if self.monitor:
+            self.monitor.record_query('success')
+            self.monitor.update_conversation_length(len(self.conversation_history))
+            self.monitor.record_latency(start_time.timestamp())
         
         return {
             'question': question,
@@ -614,8 +683,10 @@ If you don't have relevant information, say so."""
     
     def chat(self):
         """Simple chat interface with conversation memory and security"""
-        print("RAG Pipeline Chat (Secure Mode) - Type 'quit' to exit, 'clear' to clear history, 'history' to view conversation")
+        print("RAG Pipeline Chat (Secure Mode + Monitoring) - Type 'quit' to exit, 'clear' to clear history, 'history' to view conversation")
         print("Security features: Input validation, PII redaction, prompt injection detection")
+        if self.monitor:
+            print("Monitoring enabled: Metrics available at http://localhost:8000/metrics")
         
         while True:
             try:

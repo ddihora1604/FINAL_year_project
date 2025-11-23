@@ -9,6 +9,16 @@ The RAG pipeline performs the following steps:
 2. **Embedding Generation**: Creates vector embeddings using sentence transformers
 3. **Vector Store**: Builds a FAISS index for efficient similarity search
 4. **Query Processing**: Enables semantic search to find relevant support responses
+5. **Security & Monitoring**: Input validation, PII redaction, and Prometheus metrics (Phase 3)
+
+## Prerequisites
+
+### Required Software
+
+1. **Python 3.8+**
+2. **Docker Desktop** (for Phase 3 monitoring)
+   - Download: https://www.docker.com/products/docker-desktop/
+   - **IMPORTANT**: Docker Desktop must be running before starting monitoring stack
 
 ## Features
 
@@ -130,3 +140,52 @@ Modify the `preprocess_text` method in `RAGPipeline` class for custom text proce
 - [ ] Add evaluation metrics
 - [ ] Support for multiple languages
 - [ ] Integration with generative models for complete RAG
+
+## Phase 3: Health & Security Metrics
+
+### Setup Monitoring Stack
+
+**IMPORTANT: Start Docker Desktop first!**
+
+1. **Verify Docker is running:**
+   ```bash
+   docker ps
+   ```
+   If this fails, open Docker Desktop and wait for it to start.
+
+2. **Start monitoring (Windows):**
+   ```bash
+   cd "Health-Security-Metrics"
+   start_monitoring.bat
+   ```
+
+3. **Start monitoring (Manual):**
+   ```bash
+   cd "Health-Security-Metrics"
+   docker-compose up -d
+   ```
+
+4. **Verify setup:**
+   ```bash
+   python verify_setup.py
+   ```
+
+5. **Start RAG pipeline with monitoring:**
+   ```bash
+   cd "RAG-Pipeline-Ollama"
+   python rag_pipeline_secure.py
+   ```
+
+### Access Points
+
+- **Metrics**: http://localhost:8000/metrics
+- **Prometheus**: http://localhost:9090
+- **Grafana**: http://localhost:3000 (admin/admin)
+
+### Quick Troubleshooting
+
+- **Docker error**: Ensure Docker Desktop is running
+- **No data in Grafana**: Check Prometheus targets at http://localhost:9090/targets
+- **Port conflicts**: Stop containers with `docker-compose down` and restart
+
+See [Health-Security-Metrics/QUICKSTART.md](Health-Security-Metrics/QUICKSTART.md) for detailed setup instructions.
