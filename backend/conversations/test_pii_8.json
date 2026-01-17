@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_pii_8",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Reference ticket TKT-789 from support",
+      "timestamp": "2025-11-30T16:35:52.769667"
+    },
+    {
+      "role": "assistant",
+      "content": "I don't see any information about a Ticket ID: [REDACTED] from support in the provided cases. Could you please provide more context or details about the purpose of referencing this Ticket ID: [REDACTED]? What kind of help do you need regarding this ticket? This will help me better understand your needs and assist you accordingly.",
+      "timestamp": "2025-11-30T16:35:52.769667",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "PlayStation",
+          "similarity_score": 0.494212806224823,
+          "text_preview": "ommitted to resolving this as quickly as possible. Please reply with additional details so we can tailor our support to your needs. Thank you for your patience and understanding. Best regards, Support..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dell XPS",
+          "similarity_score": 0.4864475131034851,
+          "text_preview": "ate, and we re here to help resolve this promptly. First, we d like to clarify that your Ticket ID: [REDACTED] initially categorized as a billing inquiry, but based on your description, it appears to be related ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Office",
+          "similarity_score": 0.48370927572250366,
+          "text_preview": "oft Support and for providing your Ticket ID: [REDACTED]. We understand this is a critical billing inquiry, and we re here to help. We notice that your message mentions an issue with the product_purchased an..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Lenovo ThinkPad",
+          "similarity_score": 0.47279036045074463,
+          "text_preview": "and account resolution team for immediate review. To help us investigate further, could you please provide: - The order number or purchase date - Screenshots or copies of any communication with custom..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.4711174964904785,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. We noticed that your support Ticket ID: [REDACTED] in without details regarding the product, issue type, subject, or description. We d love to assist you, bu..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:35:51.107204",
+  "updated_at": "2025-11-30T16:35:52.769667"
+}

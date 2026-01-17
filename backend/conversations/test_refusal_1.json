@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_refusal_1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What's the weather today in New York?",
+      "timestamp": "2025-11-30T16:36:04.412453"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm happy to help with your question! However, I'm a technical support assistant, and it seems that your question is not related to a technical issue or a product support query. I'm not equipped to provide general information about the weather. If you have a question about a product or a technical issue, I'd be happy to help. Otherwise, I recommend checking a weather website or app for the current weather conditions in New York.",
+      "timestamp": "2025-11-30T16:36:04.412453",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Asus ROG",
+          "similarity_score": 0.2572060823440552,
+          "text_preview": "ny apps or processes consuming excessive power. 3. Update Apps Firmware: Ensure all apps and system firmware are up to date, as patches may have already addressed compatibility issues. 4. Safe Mode Te..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "GoPro Hero",
+          "similarity_score": 0.21712510287761688,
+          "text_preview": "Wishing you a joyful and peaceful holiday season. Warm regards, Alex Rivera GoPro Customer: [NAME REDACTED].com [PHONE REDACTED] GoPro.com support"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nest Thermostat",
+          "similarity_score": 0.194157212972641,
+          "text_preview": "wered, within range, and updated to the latest. 3. Restart with to the App: Open the Google Home app, select your thermostat, and check for any alerts under Settings Thermostat Health. 4. Factory Rese..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nest Thermostat",
+          "similarity_score": 0.19034814834594727,
+          "text_preview": "it. The thermostat should reboot and reconnect. 4. Update the Google Home App : Ensure the app is up to date and check for any pending firmware updates for your device. If the issue persists, it s pos..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nest Thermostat",
+          "similarity_score": 0.1831766664981842,
+          "text_preview": "unt when your device is connected to the internet. Since you performed a factory reset, local settings on the device were cleared. However, if your thermostat was linked to a Google account prior to t..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:36:02.637669",
+  "updated_at": "2025-11-30T16:36:04.412453"
+}

@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_conv_7",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Canon EOS camera specifications",
+      "timestamp": "2025-11-30T16:34:25.706017"
+    },
+    {
+      "role": "assistant",
+      "content": "I can help you with general information about the Canon EOS camera. However, I don't have direct access to specific product specifications. \n\nFrom what I understand, the Canon EOS is a line of digital single-lens reflex (DSLR) cameras or mirrorless cameras known for their high-quality image capture and advanced features.\n\nIf you're looking for detailed specifications or information on a specific model, I can suggest some general resources. You can check the Canon website or the user manual for your camera model, which should have detailed information on its features and specifications.\n\nCould you please provide more information about what you're looking for in the Canon EOS camera specifications? Are you interested in learning about a specific feature, such as image resolution, lens compatibility, or connectivity options?",
+      "timestamp": "2025-11-30T16:34:25.706017",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.6710025072097778,
+          "text_preview": "user manual, yet the compatibility issue persists. To assist you effectively, we kindly ask for a few additional details: - The exact model of your Canon EOS camera - The device or software e.g., lens..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.6554298400878906,
+          "text_preview": "aching out to us, and thank you for your patience. We sincerely apologize for the frustration you re experiencing with your Canon EOS camera and its compatibility with peripheral devices. We understan..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.6306038498878479,
+          "text_preview": "ching out to us, and thank you for choosing Canon. We sincerely apologize for the frustration you re experiencing with setting up your Canon EOS camera. We re here to help and will ensure you get up a..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.6278706192970276,
+          "text_preview": "serve you, we d like to clarify a few details: 1. Product Clarification : Could you please confirm the exact model of the Canon EOS product you purchased and provide details about the bundle e.g., inc..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.6242223978042603,
+          "text_preview": "k you for reaching out to us with Ticket ID: [REDACTED]. We sincerely apologize for the inconvenience you re experiencing with the Canon EOS camera. We understand how important this product is to your photo..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:34:23.158848",
+  "updated_at": "2025-11-30T16:34:25.706017"
+}

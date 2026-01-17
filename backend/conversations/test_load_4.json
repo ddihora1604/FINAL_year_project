@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Troubleshooting network issues",
+      "timestamp": "2025-11-24T10:08:45.789148"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you troubleshoot network issues with your device. Based on the information provided, I'll do my best to assist you with the issue you're experiencing.\n\nTo better understand the problem, can you please provide more details about the network issue you're experiencing? For example, is the issue with:\n\n* Connecting to a specific network\n* Dropping or disconnecting from the network\n* Slow internet speeds\n* Unable to access certain websites or services\n\nAlso, could you please provide me with the make and model of your device, or any other relevant information that might help me assist you better?\n\nI'll do my best to provide you with targeted troubleshooting steps to help resolve the issue.",
+      "timestamp": "2025-11-24T10:08:45.789148",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.6565895080566406,
+          "text_preview": "Subject: Network problem Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? -If you know o..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "PlayStation",
+          "similarity_score": 0.6312630772590637,
+          "text_preview": "Subject: Product setup Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? When looking at ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony 4K HDR TV",
+          "similarity_score": 0.6059026718139648,
+          "text_preview": "Subject: Delivery problem Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? My Router I v..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony 4K HDR TV",
+          "similarity_score": 0.5989746451377869,
+          "text_preview": "ready taken, including performing a factory reset. To help resolve the network instability, let s work through a few targeted troubleshooting steps: 1. Check Your Network Environment - Ensure your Wi-..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose SoundLink Speaker",
+          "similarity_score": 0.595684289932251,
+          "text_preview": "Subject: Hardware issue Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? Please note tha..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Troubleshooting network issues",
+      "timestamp": "2025-11-24T10:13:39.112757"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you troubleshoot network issues. Can you please tell me a bit more about the problem you're experiencing? What type of device are you having trouble with (e.g. TV, computer, smartphone)? And have you tried any troubleshooting steps already? \n\nI can look at the relevant cases and provide guidance based on similar issues we've helped customers with before.",
+      "timestamp": "2025-11-24T10:13:39.112757",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.6565895080566406,
+          "text_preview": "Subject: Network problem Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? -If you know o..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "PlayStation",
+          "similarity_score": 0.6312630772590637,
+          "text_preview": "Subject: Product setup Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? When looking at ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony 4K HDR TV",
+          "similarity_score": 0.6059026718139648,
+          "text_preview": "Subject: Delivery problem Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? My Router I v..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony 4K HDR TV",
+          "similarity_score": 0.5989746451377869,
+          "text_preview": "ready taken, including performing a factory reset. To help resolve the network instability, let s work through a few targeted troubleshooting steps: 1. Check Your Network Environment - Ensure your Wi-..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose SoundLink Speaker",
+          "similarity_score": 0.595684289932251,
+          "text_preview": "Subject: Hardware issue Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? Please note tha..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Troubleshooting network issues",
+      "timestamp": "2025-11-24T10:27:04.031311"
+    },
+    {
+      "role": "assistant",
+      "content": "Based on the information provided in the support cases, it seems that the most relevant cases related to your issue are Case 1 and Case 4. However, neither of these cases directly address your question.\n\nThat being said, I can try to provide you with general troubleshooting steps to help resolve your network issues.\n\nTo troubleshoot your network issues, I recommend checking the following:\n\n1. Ensure your Wi-Fi router is within a reasonable distance and free from obstructions or interference, such as microwaves or cordless phones.\n2. Test other devices on the same network. If they also experience drops, the issue may lie with your router or internet service provider (ISP).\n3. Restart your router and modem to see if that resolves the issue.\n4. Check your network settings to ensure that your device is connected to the correct network and configured correctly.\n5. If you're using a mobile device, try forgetting the network and reconnecting to see if that resolves the issue.\n\nIf none of these steps resolve the issue, it's possible that there's a hardware-related problem that may require repair or replacement.\n\nPlease provide more information about your specific issue, such as the devices you're using and any error messages you're seeing, and I'll do my best to assist you further.",
+      "timestamp": "2025-11-24T10:27:04.031311",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.6565895080566406,
+          "text_preview": "Subject: Network problem Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? -If you know o..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "PlayStation",
+          "similarity_score": 0.6312630772590637,
+          "text_preview": "Subject: Product setup Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? When looking at ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony 4K HDR TV",
+          "similarity_score": 0.6059026718139648,
+          "text_preview": "Subject: Delivery problem Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? My Router I v..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony 4K HDR TV",
+          "similarity_score": 0.5989746451377869,
+          "text_preview": "ready taken, including performing a factory reset. To help resolve the network instability, let s work through a few targeted troubleshooting steps: 1. Check Your Network Environment - Ensure your Wi-..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose SoundLink Speaker",
+          "similarity_score": 0.595684289932251,
+          "text_preview": "Subject: Hardware issue Description: I ve recently set up my product_purchased , but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? Please note tha..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:08:43.205010",
+  "updated_at": "2025-11-24T10:27:04.031311"
+}

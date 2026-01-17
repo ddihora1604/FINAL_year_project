@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_8",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Contact for ticket #789",
+      "timestamp": "2025-11-24T10:09:04.081019"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot provide information about a specific ticket #789. However, I can help you with any technical support issues you may be experiencing. What seems to be the problem you're trying to troubleshoot?",
+      "timestamp": "2025-11-24T10:09:04.081019",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Kindle",
+          "similarity_score": 0.554772138595581,
+          "text_preview": "6 Dear Customer, Thank you for reaching out to us. We understand that this situation is frustrating, and we sincerely apologize for the delays and lack of resolution in your previous interactions with..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nikon D",
+          "similarity_score": 0.5546517968177795,
+          "text_preview": "order number and proof of purchase, if available. While our refund requests are typically handled via email, please note that the correct address is info cadetv.net not email protected , which appears..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nintendo Switch",
+          "similarity_score": 0.518569827079773,
+          "text_preview": "r phone number with reference to Ticket ID: [REDACTED] . Again, I truly apologize for the inconvenience and appreciate your patience as we work to resolve this urgently. We are committed to ensuring you rec..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.5143874883651733,
+          "text_preview": "tion, we d like to understand your concerns fully. Depending on the stage of your order processed, shipped, delivered , we can guide you through return, exchange, or refund options per our policy. We ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "HP Pavilion",
+          "similarity_score": 0.5099896192550659,
+          "text_preview": "or reply directly to this Ticket ID: [REDACTED] the details. Once we have this, we ll escalate your case to our billing and order verification team for immediate review. We understand this is a critical issue, ..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Contact for ticket #789",
+      "timestamp": "2025-11-24T10:14:01.483376"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm happy to help! However, I'd like to clarify that I'm not authorized to provide contact information for specific Ticket ID: [REDACTED] or Customer: [NAME REDACTED]. As a Customer: [NAME REDACTED], my primary goal is to assist you with your technical support issues using the provided case examples.\n\nIf you're looking for assistance with a specific issue or product, please feel free to share more details about the problem you're experiencing. I'll do my best to provide a helpful solution based on the cases I have access to.\n\nIf you have any further questions or concerns, please don't hesitate to ask. I'm here to help you with any technical support-related issues.",
+      "timestamp": "2025-11-24T10:14:01.483376",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Kindle",
+          "similarity_score": 0.554772138595581,
+          "text_preview": "6 Dear Customer, Thank you for reaching out to us. We understand that this situation is frustrating, and we sincerely apologize for the delays and lack of resolution in your previous interactions with..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nikon D",
+          "similarity_score": 0.5546517968177795,
+          "text_preview": "order number and proof of purchase, if available. While our refund requests are typically handled via email, please note that the correct address is info cadetv.net not email protected , which appears..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nintendo Switch",
+          "similarity_score": 0.518569827079773,
+          "text_preview": "r phone number with reference to Ticket ID: [REDACTED] . Again, I truly apologize for the inconvenience and appreciate your patience as we work to resolve this urgently. We are committed to ensuring you rec..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.5143874883651733,
+          "text_preview": "tion, we d like to understand your concerns fully. Depending on the stage of your order processed, shipped, delivered , we can guide you through return, exchange, or refund options per our policy. We ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "HP Pavilion",
+          "similarity_score": 0.5099896192550659,
+          "text_preview": "or reply directly to this Ticket ID: [REDACTED] the details. Once we have this, we ll escalate your case to our billing and order verification team for immediate review. We understand this is a critical issue, ..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Contact for ticket #789",
+      "timestamp": "2025-11-24T10:27:24.030517"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot display Customer: [NAME REDACTED]: [REDACTED]. Is there anything else I can help you with?",
+      "timestamp": "2025-11-24T10:27:24.030517",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Kindle",
+          "similarity_score": 0.554772138595581,
+          "text_preview": "6 Dear Customer, Thank you for reaching out to us. We understand that this situation is frustrating, and we sincerely apologize for the delays and lack of resolution in your previous interactions with..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nikon D",
+          "similarity_score": 0.5546517968177795,
+          "text_preview": "order number and proof of purchase, if available. While our refund requests are typically handled via email, please note that the correct address is info cadetv.net not email protected , which appears..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nintendo Switch",
+          "similarity_score": 0.518569827079773,
+          "text_preview": "r phone number with reference to Ticket ID: [REDACTED] . Again, I truly apologize for the inconvenience and appreciate your patience as we work to resolve this urgently. We are committed to ensuring you rec..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.5143874883651733,
+          "text_preview": "tion, we d like to understand your concerns fully. Depending on the stage of your order processed, shipped, delivered , we can guide you through return, exchange, or refund options per our policy. We ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "HP Pavilion",
+          "similarity_score": 0.5099896192550659,
+          "text_preview": "or reply directly to this Ticket ID: [REDACTED] the details. Once we have this, we ll escalate your case to our billing and order verification team for immediate review. We understand this is a critical issue, ..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:09:02.951592",
+  "updated_at": "2025-11-24T10:27:24.030517"
+}

@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How to setup my printer?",
+      "timestamp": "2025-11-24T10:08:31.836303"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help with setting up your printer! Based on the information provided, I'd like to suggest a few options to help you get started.\n\nSince you didn't specify the type of printer you have, I'll provide general steps that might be applicable to most printers. If you could provide more details about your printer model or type, I'd be happy to tailor the instructions to your specific device.\n\nHere are the general steps to follow:\n\n1. Connect the power cord and turn on the printer.\n2. Install the ink cartridges (if applicable).\n3. Download and install the printer driver from the manufacturer's website (if you haven't done so already).\n4. Connect the printer to your computer or mobile device via USB, Wi-Fi, or Bluetooth.\n5. Follow the on-screen instructions to complete the setup process.\n\nIf you're experiencing any issues during the setup process, please let me know and I'll do my best to provide further assistance.\n\nCan you please provide more details about your printer model or type, or let me know if you're encountering any specific issues during the setup process?",
+      "timestamp": "2025-11-24T10:08:31.836303",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.5111119151115417,
+          "text_preview": "step-by-step instructions tailored to your model. We re committed to ensuring you have a positive experience. Best regards, Support Team Canon Customer: [NAME REDACTED].usa.canon.com support https: www.usa.ca..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "HP Pavilion",
+          "similarity_score": 0.4296637177467346,
+          "text_preview": "patience we re here to help every step of the way. Best regards, Linda Chen HP Customer: [NAME REDACTED].com 1-800-HP-INVENT [PHONE REDACTED] Available Mon Fri, 8 AM 8 PM EST"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.41739076375961304,
+          "text_preview": "used for registration, and we can assist further. Please reply with the correct service name or any error messages you see, and I ll guide you step-by-step. We re here to help! Best regards, Support T..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon DSLR Camera",
+          "similarity_score": 0.4103853106498718,
+          "text_preview": "d we ll guide you through the next steps promptly. Best regards, Alex Morgan Canon Customer: [NAME REDACTED]-support.com 1-800-CANON-SUPPORT [PHONE REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon DSLR Camera",
+          "similarity_score": 0.3966905474662781,
+          "text_preview": "ify what type of installation you re referring to? Since the Canon DSLR is a standalone camera, common setup steps may include: - Installing the battery and memory card - Attaching the lens properly -..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "How to setup my printer?",
+      "timestamp": "2025-11-24T10:13:25.668733"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you with setting up your printer! Can you please provide more information about the printer you're using and the issue you're experiencing? For example, what type of printer is it (inkjet, laser, etc.) and what operating system are you using?",
+      "timestamp": "2025-11-24T10:13:25.668733",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.5111119151115417,
+          "text_preview": "step-by-step instructions tailored to your model. We re committed to ensuring you have a positive experience. Best regards, Support Team Canon Customer: [NAME REDACTED].usa.canon.com support https: www.usa.ca..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "HP Pavilion",
+          "similarity_score": 0.4296637177467346,
+          "text_preview": "patience we re here to help every step of the way. Best regards, Linda Chen HP Customer: [NAME REDACTED].com 1-800-HP-INVENT [PHONE REDACTED] Available Mon Fri, 8 AM 8 PM EST"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.41739076375961304,
+          "text_preview": "used for registration, and we can assist further. Please reply with the correct service name or any error messages you see, and I ll guide you step-by-step. We re here to help! Best regards, Support T..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon DSLR Camera",
+          "similarity_score": 0.4103853106498718,
+          "text_preview": "d we ll guide you through the next steps promptly. Best regards, Alex Morgan Canon Customer: [NAME REDACTED]-support.com 1-800-CANON-SUPPORT [PHONE REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon DSLR Camera",
+          "similarity_score": 0.3966905474662781,
+          "text_preview": "ify what type of installation you re referring to? Since the Canon DSLR is a standalone camera, common setup steps may include: - Installing the battery and memory card - Attaching the lens properly -..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "How to setup my printer?",
+      "timestamp": "2025-11-24T10:26:47.151967"
+    },
+    {
+      "role": "assistant",
+      "content": "Based on the case examples, it seems that the most relevant one to your question is Case 5, which is related to setting up a Canon DSLR camera. However, since you're asking about a printer, I'll try to provide a general solution.\n\nTo help you with setting up your printer, I'd like to know more about your specific printer model and the type of setup you're trying to do. Are you trying to connect your printer to a computer, Wi-Fi network, or a mobile device? Are you experiencing any error messages or issues during the setup process?\n\nPlease provide more context about your issue, and I'll do my best to assist you with a step-by-step solution or direct you to a relevant resource.",
+      "timestamp": "2025-11-24T10:26:47.151967",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.5111119151115417,
+          "text_preview": "step-by-step instructions tailored to your model. We re committed to ensuring you have a positive experience. Best regards, Support Team Canon Customer: [NAME REDACTED].usa.canon.com support https: www.usa.ca..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "HP Pavilion",
+          "similarity_score": 0.4296637177467346,
+          "text_preview": "patience we re here to help every step of the way. Best regards, Linda Chen HP Customer: [NAME REDACTED].com 1-800-HP-INVENT [PHONE REDACTED] Available Mon Fri, 8 AM 8 PM EST"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.41739076375961304,
+          "text_preview": "used for registration, and we can assist further. Please reply with the correct service name or any error messages you see, and I ll guide you step-by-step. We re here to help! Best regards, Support T..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon DSLR Camera",
+          "similarity_score": 0.4103853106498718,
+          "text_preview": "d we ll guide you through the next steps promptly. Best regards, Alex Morgan Canon Customer: [NAME REDACTED]-support.com 1-800-CANON-SUPPORT [PHONE REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon DSLR Camera",
+          "similarity_score": 0.3966905474662781,
+          "text_preview": "ify what type of installation you re referring to? Since the Canon DSLR is a standalone camera, common setup steps may include: - Installing the battery and memory card - Attaching the lens properly -..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:08:28.541652",
+  "updated_at": "2025-11-24T10:26:47.151967"
+}

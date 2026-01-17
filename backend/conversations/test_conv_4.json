@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_conv_4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What's the return policy?",
+      "timestamp": "2025-11-30T16:34:07.737755"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'd be happy to help you with your question about the return policy. As a technical support assistant, I can provide general information on our return policy. However, please note that return policies may vary depending on the product and its manufacturer.\n\nFrom what I understand, you're looking for information on our return policy. As a general guideline, we offer a 30-day return window for most of our products. During this period, you can initiate a return or exchange if the product meets our return policy requirements.\n\nTo better assist you, could you please provide me with the product you're interested in returning or exchanging? This will allow me to provide more specific information on our return policy for that particular product.\n\nAdditionally, if you've already purchased the product and would like to initiate the return or exchange process, please confirm your purchase date and provide your order number so we can verify eligibility.\n\nPlease let me know how I can assist you further.",
+      "timestamp": "2025-11-30T16:34:07.737755",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Garmin Forerunner",
+          "similarity_score": 0.6382591724395752,
+          "text_preview": "expected standards, we re happy to assist further. As this is a critical request, we can proceed with a return or refund if the product is within the 30-day return window and meets our policy requirem..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Surface",
+          "similarity_score": 0.6014572381973267,
+          "text_preview": "r on our end, standard return policies will apply. We recommend contacting our Returns Exchanges team within 14 days of delivery to explore your options, including returning the device for a refund or..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Apple AirPods",
+          "similarity_score": 0.5993524193763733,
+          "text_preview": "r our 14-day return policy for defective products. Please let us know if you d like to initiate the refund process or schedule a replacement. We re committed to ensuring your satisfaction. Best regard..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.5770993232727051,
+          "text_preview": "te of purchase to return it in like-new condition. If purchased through a third-party retailer, their return policy applies. Please let us know where you made the purchase, and we ll guide you through..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Surface",
+          "similarity_score": 0.5749490261077881,
+          "text_preview": "our return policy. Looking forward to your update. Best regards, Alex Carter Customer: [NAME REDACTED]"
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:34:03.316812",
+  "updated_at": "2025-11-30T16:34:07.737755"
+}

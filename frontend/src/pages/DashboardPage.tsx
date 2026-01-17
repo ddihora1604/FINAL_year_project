@@ -6,6 +6,7 @@ import {
   Typography,
   Card,
   CardContent,
+  Avatar,
 } from '@mui/material';
 import {
   TrendingUp as TrendingUpIcon,
@@ -55,13 +56,15 @@ const DashboardPage: React.FC = () => {
       {/* Metrics Summary Cards */}
       <Grid container spacing={3} sx={{ mb: 3 }}>
         <Grid item xs={12} sm={6} md={3}>
-          <Card>
+          <Card sx={{ background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', border: '1px solid rgba(255,255,255,0.1)' }}>
             <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <TrendingUpIcon color="primary" sx={{ mr: 1 }} />
-                <Typography variant="h6">Total Queries</Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <Avatar sx={{ bgcolor: 'primary.main', mr: 2 }}>
+                  <TrendingUpIcon />
+                </Avatar>
+                <Typography variant="h6" color="text.secondary">Total Queries</Typography>
               </Box>
-              <Typography variant="h4">{metrics.total_queries}</Typography>
+              <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{metrics.total_queries}</Typography>
               <Typography variant="caption" color="text.secondary">
                 Last 24 hours
               </Typography>
@@ -70,13 +73,15 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Card>
+          <Card sx={{ background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', border: '1px solid rgba(255,255,255,0.1)' }}>
             <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <SecurityIcon color="error" sx={{ mr: 1 }} />
-                <Typography variant="h6">Attacks Blocked</Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <Avatar sx={{ bgcolor: 'error.main', mr: 2 }}>
+                  <SecurityIcon />
+                </Avatar>
+                <Typography variant="h6" color="text.secondary">Attacks Blocked</Typography>
               </Box>
-              <Typography variant="h4">{metrics.blocked_attacks}</Typography>
+              <Typography variant="h3" sx={{ fontWeight: 'bold', color: 'error.main' }}>{metrics.blocked_attacks}</Typography>
               <Typography variant="caption" color="text.secondary">
                 Security events
               </Typography>
@@ -85,13 +90,15 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Card>
+          <Card sx={{ background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', border: '1px solid rgba(255,255,255,0.1)' }}>
             <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <SpeedIcon color="success" sx={{ mr: 1 }} />
-                <Typography variant="h6">Avg Response</Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <Avatar sx={{ bgcolor: 'success.main', mr: 2 }}>
+                  <SpeedIcon />
+                </Avatar>
+                <Typography variant="h6" color="text.secondary">Avg Response</Typography>
               </Box>
-              <Typography variant="h4">
+              <Typography variant="h3" sx={{ fontWeight: 'bold' }}>
                 {metrics.avg_response_time.toFixed(2)}s
               </Typography>
               <Typography variant="caption" color="text.secondary">
@@ -102,13 +109,15 @@ const DashboardPage: React.FC = () => {
         </Grid>
 
         <Grid item xs={12} sm={6} md={3}>
-          <Card>
+          <Card sx={{ background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', border: '1px solid rgba(255,255,255,0.1)' }}>
             <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <CheckCircleIcon color="success" sx={{ mr: 1 }} />
-                <Typography variant="h6">Success Rate</Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <Avatar sx={{ bgcolor: 'info.main', mr: 2 }}>
+                  <CheckCircleIcon />
+                </Avatar>
+                <Typography variant="h6" color="text.secondary">Success Rate</Typography>
               </Box>
-              <Typography variant="h4">{metrics.success_rate.toFixed(1)}%</Typography>
+              <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{metrics.success_rate.toFixed(1)}%</Typography>
               <Typography variant="caption" color="text.secondary">
                 Query success
               </Typography>
@@ -144,7 +153,7 @@ const DashboardPage: React.FC = () => {
             </Card>
           </a>
         </Box>
-        
+
         <Box sx={{ mt: 3 }}>
           <Typography variant="body2" color="text.secondary">
             📊 Access Grafana at: <a href={GRAFANA_URL} target="_blank" rel="noopener noreferrer">{GRAFANA_URL}</a>

@@ -1,0 +1,53 @@
+{
+  "conversation_id": "conv_1764500575087",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hello",
+      "timestamp": "2025-11-30T16:32:58.418769"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! Welcome to our technical support channel. I'm here to help with any questions or concerns you may have. Could you please provide more context about the issue you're experiencing so I can better understand and assist you? What product are you having trouble with, and what's the nature of your issue?",
+      "timestamp": "2025-11-30T16:32:58.418769",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.2539920508861542,
+          "text_preview": "full picture. Looking forward to hearing from you! Best regards, Your Name Customer: [NAME REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.2280341386795044,
+          "text_preview": "sed . Could you please guide me through the steps? Resolution: Subject: Re: Cancellation Request Ticket ID: [REDACTED] Dear Valued Customer, Thank you for reaching out to us, and thank you for your patience..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Kindle",
+          "similarity_score": 0.2221672534942627,
+          "text_preview": "6 Dear Customer, Thank you for reaching out to us. We understand that this situation is frustrating, and we sincerely apologize for the delays and lack of resolution in your previous interactions with..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.22113461792469025,
+          "text_preview": "mmitted to making your Roomba experience seamless. Please reply with the requested details, and we ll provide immediate, personalized assistance. Warm regards, iRobot Customer: [NAME REDACTED]..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.21329905092716217,
+          "text_preview": "ou. Thank you for your patience and understanding. Warm regards, Alex Morgan Customer: [NAME REDACTED].com 1-800-ROBOT-1"
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:32:55.087483",
+  "updated_at": "2025-11-30T16:32:58.418769"
+}

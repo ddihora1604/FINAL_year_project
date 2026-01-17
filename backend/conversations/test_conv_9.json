@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_conv_9",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Dyson vacuum maintenance tips",
+      "timestamp": "2025-11-30T16:34:38.728068"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'd be happy to help you with Dyson vacuum maintenance tips. Based on our previous conversations with customers who have similar issues, I'll provide you with some general guidance on how to keep your Dyson vacuum in good working condition.\n\nFirstly, it's essential to regularly clean the filter and check for blockages in the hose, wand, and brush bar. You can refer to your user manual for specific instructions on how to clean and maintain your vacuum.\n\nAdditionally, make sure to keep your connected mobile devices updated, use strong and unique passwords for your Wi-Fi and associated apps, and register your product directly with Dyson via their website for full support access.\n\nIf you're experiencing any issues with your vacuum, I recommend trying the troubleshooting steps provided in Case 5, which include checking for blockages, inspecting the filter, and ensuring that the vacuum is properly assembled.\n\nPlease let me know if you have any further questions or if there's anything else I can assist you with.",
+      "timestamp": "2025-11-30T16:34:38.728068",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dyson Vacuum Cleaner",
+          "similarity_score": 0.6932750940322876,
+          "text_preview": "ter assist you. Thank you for your trust in Dyson. We re committed to getting your vacuum back to full performance as quickly as possible. Sincerely, Dyson Customer: [NAME REDACTED] [PHONE REDACTED] Availab..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dyson Vacuum Cleaner",
+          "similarity_score": 0.6894658207893372,
+          "text_preview": "o getting your vacuum back to optimal performance. Best regards, Lena Carter Dyson Customer: [NAME REDACTED].com [PHONE REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dyson Vacuum Cleaner",
+          "similarity_score": 0.6621125936508179,
+          "text_preview": "truly appreciate your patience and understanding. Your feedback helps us improve, and we re committed to making this right for you. Warm regards, Lena Patel Dyson Customer: [NAME REDACTED] d..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dyson Vacuum Cleaner",
+          "similarity_score": 0.6166135668754578,
+          "text_preview": "ure: - Keep your connected mobile devices updated. - Use strong, unique passwords for your Wi-Fi and associated apps. - Register your product directly with Dyson via our website for full support acces..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dyson Vacuum Cleaner",
+          "similarity_score": 0.6161566972732544,
+          "text_preview": "t of error_message to provide a precise diagnosis. Dyson vacuums use specific error codes e.g., Check Filter, Blockage Detected, or numeric codes like E1 to indicate issues such as blockages, sensor f..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:34:34.312238",
+  "updated_at": "2025-11-30T16:34:38.728068"
+}

@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_9",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What's 2+2?",
+      "timestamp": "2025-11-24T10:09:07.357927"
+    },
+    {
+      "role": "assistant",
+      "content": "The answer to 2+2 is 4.",
+      "timestamp": "2025-11-24T10:09:07.357927",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon DSLR Camera",
+          "similarity_score": 0.24566330015659332,
+          "text_preview": "ssue 2. Your order or proof of purchase details 3. A photo or video demonstrating the problem if possible Once we have this information, we ll expedite your case and provide a resolution within 24 hou..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Asus ROG",
+          "similarity_score": 0.22639495134353638,
+          "text_preview": "4 7 . Thank you for your patience and cooperation. We re committed to resolving this promptly and ensuring your satisfaction. Best regards, Lena Park Senior Customer: [NAME REDACTED]..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Samsung Galaxy",
+          "similarity_score": 0.2131352722644806,
+          "text_preview": "The exact model of your Samsung Galaxy device. 2. A detailed description of the network issue e.g., No service, Data not working, Drops connection frequently . 3. Whether this is a device issue or a b..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Xbox Controller",
+          "similarity_score": 0.2053060382604599,
+          "text_preview": "as 5 increments directly influence its operation. If you re referring to a purchase, subscription like Xbox Game Pass , or in-game spending, that may fall under a different support category. To best a..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose QuietComfort",
+          "similarity_score": 0.19939768314361572,
+          "text_preview": "o firmware, device pairing, or a hardware concern. Once you confirm the exact model, we ll: - Provide tailored troubleshooting guidance - Check for available firmware updates - Offer replacement or re..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "What's 2+2?",
+      "timestamp": "2025-11-24T10:14:06.424597"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm happy to help with your math question! However, I'm a technical support assistant, and I don't have any information or case examples related to basic arithmetic operations. I'm here to help with technical support issues, not math calculations.\n\nIf you'd like to discuss a specific technical issue or product-related problem, I'd be happy to try and assist you using the case examples I have access to.",
+      "timestamp": "2025-11-24T10:14:06.424597",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon DSLR Camera",
+          "similarity_score": 0.24566330015659332,
+          "text_preview": "ssue 2. Your order or proof of purchase details 3. A photo or video demonstrating the problem if possible Once we have this information, we ll expedite your case and provide a resolution within 24 hou..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Asus ROG",
+          "similarity_score": 0.22639495134353638,
+          "text_preview": "4 7 . Thank you for your patience and cooperation. We re committed to resolving this promptly and ensuring your satisfaction. Best regards, Lena Park Senior Customer: [NAME REDACTED]..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Samsung Galaxy",
+          "similarity_score": 0.2131352722644806,
+          "text_preview": "The exact model of your Samsung Galaxy device. 2. A detailed description of the network issue e.g., No service, Data not working, Drops connection frequently . 3. Whether this is a device issue or a b..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Xbox Controller",
+          "similarity_score": 0.2053060382604599,
+          "text_preview": "as 5 increments directly influence its operation. If you re referring to a purchase, subscription like Xbox Game Pass , or in-game spending, that may fall under a different support category. To best a..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose QuietComfort",
+          "similarity_score": 0.19939768314361572,
+          "text_preview": "o firmware, device pairing, or a hardware concern. Once you confirm the exact model, we ll: - Provide tailored troubleshooting guidance - Check for available firmware updates - Offer replacement or re..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "What's 2+2?",
+      "timestamp": "2025-11-24T10:27:27.501773"
+    },
+    {
+      "role": "assistant",
+      "content": "I can help you with that! The answer to 2+2 is 4.",
+      "timestamp": "2025-11-24T10:27:27.501773",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon DSLR Camera",
+          "similarity_score": 0.24566330015659332,
+          "text_preview": "ssue 2. Your order or proof of purchase details 3. A photo or video demonstrating the problem if possible Once we have this information, we ll expedite your case and provide a resolution within 24 hou..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Asus ROG",
+          "similarity_score": 0.22639495134353638,
+          "text_preview": "4 7 . Thank you for your patience and cooperation. We re committed to resolving this promptly and ensuring your satisfaction. Best regards, Lena Park Senior Customer: [NAME REDACTED]..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Samsung Galaxy",
+          "similarity_score": 0.2131352722644806,
+          "text_preview": "The exact model of your Samsung Galaxy device. 2. A detailed description of the network issue e.g., No service, Data not working, Drops connection frequently . 3. Whether this is a device issue or a b..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Xbox Controller",
+          "similarity_score": 0.2053060382604599,
+          "text_preview": "as 5 increments directly influence its operation. If you re referring to a purchase, subscription like Xbox Game Pass , or in-game spending, that may fall under a different support category. To best a..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose QuietComfort",
+          "similarity_score": 0.19939768314361572,
+          "text_preview": "o firmware, device pairing, or a hardware concern. Once you confirm the exact model, we ll: - Provide tailored troubleshooting guidance - Check for available firmware updates - Offer replacement or re..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:09:06.325988",
+  "updated_at": "2025-11-24T10:27:27.501773"
+}

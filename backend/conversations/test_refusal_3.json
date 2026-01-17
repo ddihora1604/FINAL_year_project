@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_refusal_3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How do I cook spaghetti carbonara?",
+      "timestamp": "2025-11-30T16:36:12.868820"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm happy to help with your question! However, I'm a technical support assistant, and it seems that your question is not related to a technical issue or a product support query. I'm not equipped to provide recipe or cooking instructions. If you have a question about a product or a technical issue, I'd be happy to help. Otherwise, I recommend checking a cookbook or a food website for the recipe to make spaghetti carbonara.",
+      "timestamp": "2025-11-30T16:36:12.868820",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Lenovo ThinkPad",
+          "similarity_score": 0.21801522374153137,
+          "text_preview": "d like step-by-step guidance or remote assistance. Best regards, Alex Reynolds Lenovo Customer: [NAME REDACTED].com [PHONE REDACTED] 1-800-IBM-4LENO"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.2078510820865631,
+          "text_preview": "equested details, and we ll take care of the rest. Warm regards, Lena Carter Customer: [NAME REDACTED].com [PHONE REDACTED] 24 7"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.17741334438323975,
+          "text_preview": "step-by-step instructions tailored to your model. We re committed to ensuring you have a positive experience. Best regards, Support Team Canon Customer: [NAME REDACTED].usa.canon.com support https: www.usa.ca..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.16979245841503143,
+          "text_preview": "ion. Please let us know how you d like to proceed. Best regards, Lena Patel Customer: [NAME REDACTED].com [PHONE REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Lenovo ThinkPad",
+          "similarity_score": 0.167068213224411,
+          "text_preview": "h the requested details so we can proceed swiftly. Sincerely, Alex Reynolds Senior Customer: [NAME REDACTED].com [PHONE REDACTED] 1-800-IBM-SELP"
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:36:11.126880",
+  "updated_at": "2025-11-30T16:36:12.868820"
+}

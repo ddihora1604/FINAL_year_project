@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_17",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Shipping information",
+      "timestamp": "2025-11-24T10:09:49.424137"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you with your question about shipping information. Since you didn't specify a particular product or issue, I'll provide general guidance.\n\nTo track your order and get updates on shipping, I recommend checking the shipping confirmation email you received from us. This email should contain the tracking number and estimated delivery date. You can also check your account dashboard or log in to your order history to view the latest shipping updates.\n\nIf you're having trouble finding this information, please let me know the order number and the product you purchased, and I'll do my best to assist you in locating the shipping details.\n\nAdditionally, you can also try contacting our Customer: [NAME REDACTED].\n\nPlease let me know if there's anything else I can help you with!",
+      "timestamp": "2025-11-24T10:09:49.424137",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.5591045618057251,
+          "text_preview": "n, could you please confirm the following details? - Your full order number - The date of purchase - The shipping address used - Any tracking information you may have received Once we have this inform..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony PlayStation",
+          "similarity_score": 0.5589653253555298,
+          "text_preview": "d, and we re committed to resolving this promptly. To assist you accurately, we kindly ask that you provide the following details: - Your order number or purchase confirmation email - The delivery add..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose QuietComfort",
+          "similarity_score": 0.5409549474716187,
+          "text_preview": "u, could you please provide the following details? - Your order number - The date the order was placed - The shipping address used - Any tracking information you may have received Once we have this in..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Surface",
+          "similarity_score": 0.5155008435249329,
+          "text_preview": "s made through an official or authorized retailer. We ve reviewed your case and confirm that your order should indeed be a retail unit and eligible for standard shipping. If you have not yet received ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Echo",
+          "similarity_score": 0.5140902996063232,
+          "text_preview": "Subject: Software bug Description: I m having an issue with the product_purchased . Please assist. What should i find I need to update the shipping? Make sure you have an account of your choice. Your ..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Shipping information",
+      "timestamp": "2025-11-24T10:14:57.975736"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you with your question about shipping information! Based on the cases I have access to, it seems that there are a few related to shipping and delivery issues. Here are some possible solutions:\n\nFrom Case 1, I can suggest:\n\n1. Could you please confirm the following details: Your full order number, the date of purchase, the shipping address used, and any tracking information you may have received? Once we have this information, we'll locate your order, determine the exact status of the delivery, and provide you with a clear update and timeline within the next 4 business hours.\n\nFrom Case 3, I can also suggest:\n\n1. Could you please provide the following details: Your order number, the date the order was placed, the shipping address used, and any tracking information you may have received? Once we have this information, we'll immediately contact our shipping partner to locate your package and provide you with an updated delivery timeline. If necessary, we can also explore options such as reshipping your order or issuing a refund, depending on your preference.\n\nFrom Case 4, I can also recommend:\n\n1. If you have not yet received a shipping confirmation or tracking information, we will escalate this to our logistics team immediately to locate your order and arrange prompt delivery.\n\nIf you're still experiencing issues with shipping, please try these steps and let me know if they resolve the problem. If not, I'll do my best to help you troubleshoot further based on the cases I have access to.",
+      "timestamp": "2025-11-24T10:14:57.975736",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.5591045618057251,
+          "text_preview": "n, could you please confirm the following details? - Your full order number - The date of purchase - The shipping address used - Any tracking information you may have received Once we have this inform..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony PlayStation",
+          "similarity_score": 0.5589653253555298,
+          "text_preview": "d, and we re committed to resolving this promptly. To assist you accurately, we kindly ask that you provide the following details: - Your order number or purchase confirmation email - The delivery add..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose QuietComfort",
+          "similarity_score": 0.5409549474716187,
+          "text_preview": "u, could you please provide the following details? - Your order number - The date the order was placed - The shipping address used - Any tracking information you may have received Once we have this in..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Surface",
+          "similarity_score": 0.5155008435249329,
+          "text_preview": "s made through an official or authorized retailer. We ve reviewed your case and confirm that your order should indeed be a retail unit and eligible for standard shipping. If you have not yet received ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Echo",
+          "similarity_score": 0.5140902996063232,
+          "text_preview": "Subject: Software bug Description: I m having an issue with the product_purchased . Please assist. What should i find I need to update the shipping? Make sure you have an account of your choice. Your ..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Shipping information",
+      "timestamp": "2025-11-24T10:28:17.137094"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you with your question about shipping information. Since you didn't specify which product or order you're inquiring about, I'll provide some general information on how to track your shipment.\n\nTo track your shipment, you can usually find the tracking number in your order confirmation email or on the shipping carrier's website. If you've lost your tracking number, you can contact the shipping carrier directly to try to locate it.\n\nAdditionally, you can also refer to the relevant support cases provided, which mention the importance of having the following information to assist with shipping inquiries:\n\n* Order number or purchase confirmation email\n* Delivery address used\n* Tracking information received\n* Photos of the items received, including packaging and labels (for cases where items were received but not as expected)\n* A description of what was expected versus what was delivered (for cases where items were received but not as expected)\n\nIf you're still having trouble tracking your shipment, please let me know and I'll do my best to help you further.",
+      "timestamp": "2025-11-24T10:28:17.137094",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.5591045618057251,
+          "text_preview": "n, could you please confirm the following details? - Your full order number - The date of purchase - The shipping address used - Any tracking information you may have received Once we have this inform..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony PlayStation",
+          "similarity_score": 0.5589653253555298,
+          "text_preview": "d, and we re committed to resolving this promptly. To assist you accurately, we kindly ask that you provide the following details: - Your order number or purchase confirmation email - The delivery add..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose QuietComfort",
+          "similarity_score": 0.5409549474716187,
+          "text_preview": "u, could you please provide the following details? - Your order number - The date the order was placed - The shipping address used - Any tracking information you may have received Once we have this in..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Surface",
+          "similarity_score": 0.5155008435249329,
+          "text_preview": "s made through an official or authorized retailer. We ve reviewed your case and confirm that your order should indeed be a retail unit and eligible for standard shipping. If you have not yet received ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Echo",
+          "similarity_score": 0.5140902996063232,
+          "text_preview": "Subject: Software bug Description: I m having an issue with the product_purchased . Please assist. What should i find I need to update the shipping? Make sure you have an account of your choice. Your ..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:09:44.075653",
+  "updated_at": "2025-11-24T10:28:17.137094"
+}

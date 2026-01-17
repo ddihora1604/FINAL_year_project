@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_pii_7",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Customer Michael Johnson's email is mjohn@email.com",
+      "timestamp": "2025-11-30T16:35:48.761880"
+    },
+    {
+      "role": "assistant",
+      "content": "I don't see any specific information about a Customer: [NAME REDACTED] [EMAIL REDACTED] in our system. Could you please provide more context or details about what kind of help you need for this email address? Is it related to an account, order, or something else? I'll do my best to assist you based on the information provided.",
+      "timestamp": "2025-11-30T16:35:48.761880",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nintendo Switch Pro Controller",
+          "similarity_score": 0.4408704936504364,
+          "text_preview": "We re here for you please don t hesitate to reply. Best regards, Customer: [NAME REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nikon D",
+          "similarity_score": 0.43585821986198425,
+          "text_preview": "he requested details at your earliest convenience. Warm regards, Alex Morgan Customer: [NAME REDACTED].com 1 800 123-4567"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Fitbit Versa Smartwatch",
+          "similarity_score": 0.42964398860931396,
+          "text_preview": "ed to contact them for return or exchange options. Please let us know if you need help locating authorized service centers or filing a warranty request we re happy to assist further. Best regards, Cus..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.41885387897491455,
+          "text_preview": "py of your order confirmation to support mfg.com . This will help us verify your product and ensure we provide accurate, personalized support. The message containing the required details is only acces..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.4146067500114441,
+          "text_preview": "g and for giving us the opportunity to assist you. Best regards, Alex Rivera Customer: [NAME REDACTED].com Phone Number Support Hours"
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:35:47.051115",
+  "updated_at": "2025-11-30T16:35:48.761880"
+}

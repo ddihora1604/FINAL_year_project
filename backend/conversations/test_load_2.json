@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What warranty does product have?",
+      "timestamp": "2025-11-24T10:08:37.330847"
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for reaching out to us. I'd be happy to help you with your question about the warranty of your product.\n\nBased on the information provided, I noticed that we have a few support cases related to warranty and return policies. However, I don't see any specific information about the warranty period or terms for the product you're inquiring about.\n\nTo better assist you, could you please provide me with more details about the product you're referring to, such as the product name, model number, or device type? This will help me look up the relevant information and provide you with a more accurate answer.\n\nAlternatively, if you could provide me with more context about the issue you're experiencing or the reason you're looking for warranty information, I'll do my best to help you with your question.",
+      "timestamp": "2025-11-24T10:08:37.330847",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Samsung Soundbar",
+          "similarity_score": 0.525843620300293,
+          "text_preview": "Subject: Product recommendation Description: I m having an issue with the product_purchased . Please assist. Please help me determine if it s warranted. If it is, please let me know and I ll do my bes..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony 4K HDR TV",
+          "similarity_score": 0.5099886655807495,
+          "text_preview": "nt, or cancellation process is the best next step. Given the critical priority of your Ticket ID: [REDACTED] your request for cancellation, please know that we fully support your right to a resolution under warr..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.5008939504623413,
+          "text_preview": "Subject: Refund request Description: I m having an issue with the product_purchased . Please assist. This page contains some technical information for determining the amount of warranty exclusivity yo..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony PlayStation",
+          "similarity_score": 0.48786020278930664,
+          "text_preview": "nction, delivery damage, failure to power on, etc. - Photos or videos demonstrating the problem if applicable Once we receive this information, we will initiate the refund process promptly, assuming t..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Fitbit Versa Smartwatch",
+          "similarity_score": 0.46288180351257324,
+          "text_preview": "Subject: Product setup Description: I m having an issue with the product_purchased . Please assist. Please provide an appropriate warranty number. Your warranty has been clearly stated. We are making ..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "What warranty does product have?",
+      "timestamp": "2025-11-24T10:13:30.338884"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you with your question about the warranty for a specific product. However, I need more information to provide a accurate answer. Can you please provide the name or model number of the product you're referring to? Additionally, you can also check the product's documentation or the manufacturer's website for information on the warranty.",
+      "timestamp": "2025-11-24T10:13:30.338884",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Samsung Soundbar",
+          "similarity_score": 0.525843620300293,
+          "text_preview": "Subject: Product recommendation Description: I m having an issue with the product_purchased . Please assist. Please help me determine if it s warranted. If it is, please let me know and I ll do my bes..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony 4K HDR TV",
+          "similarity_score": 0.5099886655807495,
+          "text_preview": "nt, or cancellation process is the best next step. Given the critical priority of your Ticket ID: [REDACTED] your request for cancellation, please know that we fully support your right to a resolution under warr..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.5008939504623413,
+          "text_preview": "Subject: Refund request Description: I m having an issue with the product_purchased . Please assist. This page contains some technical information for determining the amount of warranty exclusivity yo..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony PlayStation",
+          "similarity_score": 0.48786020278930664,
+          "text_preview": "nction, delivery damage, failure to power on, etc. - Photos or videos demonstrating the problem if applicable Once we receive this information, we will initiate the refund process promptly, assuming t..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Fitbit Versa Smartwatch",
+          "similarity_score": 0.46288180351257324,
+          "text_preview": "Subject: Product setup Description: I m having an issue with the product_purchased . Please assist. Please provide an appropriate warranty number. Your warranty has been clearly stated. We are making ..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "What warranty does product have?",
+      "timestamp": "2025-11-24T10:26:53.152590"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm happy to help you with your question about the warranty of the product. Based on the information provided in the support cases, I can see that the warranty period for different products varies.\n\nFor example, in Case 2, it's mentioned that the warranty period for the Sony 4K HDR TV is usually 1 year. Similarly, in Case 4, the warranty period for the Sony PlayStation is typically within 14-30 days of delivery, unused, and in original packaging.\n\nIn Case 5, the warranty period for the Fitbit Versa Smartwatch is not explicitly mentioned, but it's mentioned that the Customer: [NAME REDACTED] a suitable warranty number.\n\nPlease note that the warranty period may vary depending on the product, retailer, and location. I recommend checking the product manual, manufacturer's website, or contacting the retailer for more information on the warranty period for your specific product.\n\nIf you have any further questions or concerns, please feel free to ask, and I'll do my best to assist you.",
+      "timestamp": "2025-11-24T10:26:53.152590",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Samsung Soundbar",
+          "similarity_score": 0.525843620300293,
+          "text_preview": "Subject: Product recommendation Description: I m having an issue with the product_purchased . Please assist. Please help me determine if it s warranted. If it is, please let me know and I ll do my bes..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony 4K HDR TV",
+          "similarity_score": 0.5099886655807495,
+          "text_preview": "nt, or cancellation process is the best next step. Given the critical priority of your Ticket ID: [REDACTED] your request for cancellation, please know that we fully support your right to a resolution under warr..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.5008939504623413,
+          "text_preview": "Subject: Refund request Description: I m having an issue with the product_purchased . Please assist. This page contains some technical information for determining the amount of warranty exclusivity yo..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony PlayStation",
+          "similarity_score": 0.48786020278930664,
+          "text_preview": "nction, delivery damage, failure to power on, etc. - Photos or videos demonstrating the problem if applicable Once we receive this information, we will initiate the refund process promptly, assuming t..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Fitbit Versa Smartwatch",
+          "similarity_score": 0.46288180351257324,
+          "text_preview": "Subject: Product setup Description: I m having an issue with the product_purchased . Please assist. Please provide an appropriate warranty number. Your warranty has been clearly stated. We are making ..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:08:34.077966",
+  "updated_at": "2025-11-24T10:26:53.152590"
+}

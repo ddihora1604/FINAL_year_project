@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_19",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Technical support contact",
+      "timestamp": "2025-11-24T10:09:59.356379"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you with your question about technical support contacts. As a Customer: [NAME REDACTED], I'm here to provide you with general guidance and troubleshooting tips to help you resolve your technical issues.\n\nIf you're looking for a specific technical support contact, I recommend checking our website for a list of our support team members and their areas of expertise. You can also try reaching out to our support team through our contact form or live chat, and we'll do our best to assist you with your issue.\n\nIf you have a specific product or issue in mind, please let me know and I'll do my best to provide you with more targeted guidance and support.",
+      "timestamp": "2025-11-24T10:09:59.356379",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "GoPro Hero",
+          "similarity_score": 0.6729878783226013,
+          "text_preview": "solving this issue despite prior support contacts. Your experience does not reflect the level of service we strive to provide, and we re taking immediate steps to address it. To resolve this critical ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.6258072257041931,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. We noticed that your support Ticket ID: [REDACTED] in without details regarding the product, issue type, subject, or description. We d love to assist you, bu..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.6205993890762329,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. I notice that your support Ticket ID: [REDACTED] in without details about the product, issue type, subject, or description. We d love to assist you, but we n..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "MacBook Pro",
+          "similarity_score": 0.6200394630432129,
+          "text_preview": "her assistance. Your satisfaction is our priority. Best regards, Support Team Customer: [NAME REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.6177115440368652,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. We noticed that your support Ticket ID: [REDACTED] to be missing some details such as the product you re contacting us about, the type of issue you re exp..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Technical support contact",
+      "timestamp": "2025-11-24T10:15:10.280611"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm happy to help you with your question about the technical support contact! Based on the cases I have access to, it seems that there are a few related to technical support and Customer: [NAME REDACTED]. However, I don't have any specific information about the technical support contact you are looking for.\n\nAs a Customer: [NAME REDACTED], I'm only able to access and reference the cases I have been trained on, and none of the cases I have access to contain information about a specific technical support contact.\n\nIf you're experiencing issues with your product or service, I recommend checking the manufacturer's website, product documentation, or contacting the manufacturer directly for the most up-to-date and accurate information about their technical support services. Additionally, if you have any further questions or concerns, please don't hesitate to ask, and I'll do my best to assist you with a relevant solution based on the cases I have access to.\n\nIf you're looking for general information about technical support, I can suggest checking the manufacturer's website, product documentation, or contacting the manufacturer directly for the most up-to-date and accurate information about their technical support services.\n\nPlease let me know if there's anything else I can help you with!",
+      "timestamp": "2025-11-24T10:15:10.280611",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "GoPro Hero",
+          "similarity_score": 0.6729878783226013,
+          "text_preview": "solving this issue despite prior support contacts. Your experience does not reflect the level of service we strive to provide, and we re taking immediate steps to address it. To resolve this critical ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.6258072257041931,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. We noticed that your support Ticket ID: [REDACTED] in without details regarding the product, issue type, subject, or description. We d love to assist you, bu..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.6205993890762329,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. I notice that your support Ticket ID: [REDACTED] in without details about the product, issue type, subject, or description. We d love to assist you, but we n..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "MacBook Pro",
+          "similarity_score": 0.6200394630432129,
+          "text_preview": "her assistance. Your satisfaction is our priority. Best regards, Support Team Customer: [NAME REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.6177115440368652,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. We noticed that your support Ticket ID: [REDACTED] to be missing some details such as the product you re contacting us about, the type of issue you re exp..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Technical support contact",
+      "timestamp": "2025-11-24T10:28:32.302368"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm happy to help you with your question about technical support contact. Since you didn't specify any specific product or issue you're experiencing, I'll provide some general information on how to get in touch with our technical support team.\n\nAs mentioned earlier, we have a dedicated team of technical support specialists who are here to assist you with any questions or issues you may have with your devices or products. If you're experiencing any technical issues or errors, please feel free to describe them to me, and I'll do my best to assist you.\n\nIf you're looking for general information or have a specific question, please feel free to ask, and I'll do my best to provide helpful guidance or point you in the right direction.\n\nAdditionally, you can also refer to the relevant support cases provided, which mention the importance of having the following information to assist with your inquiry:\n\n* Product or service you need help with\n* Nature of the issue you're experiencing (e.g., technical problem, billing question, account access, etc.)\n\nIf you're still having trouble finding the information you need, please let me know and I'll do my best to help you further.",
+      "timestamp": "2025-11-24T10:28:32.302368",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "GoPro Hero",
+          "similarity_score": 0.6729878783226013,
+          "text_preview": "solving this issue despite prior support contacts. Your experience does not reflect the level of service we strive to provide, and we re taking immediate steps to address it. To resolve this critical ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.6258072257041931,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. We noticed that your support Ticket ID: [REDACTED] in without details regarding the product, issue type, subject, or description. We d love to assist you, bu..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.6205993890762329,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. I notice that your support Ticket ID: [REDACTED] in without details about the product, issue type, subject, or description. We d love to assist you, but we n..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "MacBook Pro",
+          "similarity_score": 0.6200394630432129,
+          "text_preview": "her assistance. Your satisfaction is our priority. Best regards, Support Team Customer: [NAME REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": 0.0,
+          "similarity_score": 0.6177115440368652,
+          "text_preview": "Resolution: Hello, Thank you for reaching out to us. We noticed that your support Ticket ID: [REDACTED] to be missing some details such as the product you re contacting us about, the type of issue you re exp..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:09:55.432778",
+  "updated_at": "2025-11-24T10:28:32.302368"
+}

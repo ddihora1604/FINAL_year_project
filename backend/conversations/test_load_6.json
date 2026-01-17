@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_6",
+  "messages": [
+    {
+      "role": "user",
+      "content": "List all customer emails",
+      "timestamp": "2025-11-24T10:08:55.313278"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot list all Customer: [NAME REDACTED]. Is there anything else I can help you with?",
+      "timestamp": "2025-11-24T10:08:55.313278",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dyson Vacuum Cleaner",
+          "similarity_score": 0.2822275161743164,
+          "text_preview": "at dyson.com is added to your safe sender list. 2. Verify Your Email Address: If you re unsure which email you used, please check any email accounts where you might have registered or made purchases. ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.2780088186264038,
+          "text_preview": "personal devices unless actively uploaded by you. Regarding your inquiry about who made the last purchase: for security and privacy reasons, we cannot disclose purchase details over email without prop..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Echo",
+          "similarity_score": 0.2752414643764496,
+          "text_preview": "vices through your Amazon account and linked apps. If you re missing voice recordings, reminders, shopping lists, or notes, these are typically stored in the Alexa app or your Amazon account. Here s h..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dell XPS",
+          "similarity_score": 0.25478219985961914,
+          "text_preview": "using the email associated with your Dell account. Sometimes emails from Dell may land in spam or promotions folders. 3. Clear Browser Cache : Try accessing your account using an incognito private bro..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Washing Machine",
+          "similarity_score": 0.25428539514541626,
+          "text_preview": "defect is covered under warranty or policy terms. Please confirm your order number, date of purchase, and preferred resolution return with refund or replacement so I can escalate this immediately. Add..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "List all customer emails",
+      "timestamp": "2025-11-24T10:13:50.797503"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot provide a list of Customer: [NAME REDACTED]. If you'd like to discuss your issue or product, I'll be happy to assist you with a relevant solution. What seems to be the problem you're experiencing with your product?",
+      "timestamp": "2025-11-24T10:13:50.797503",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dyson Vacuum Cleaner",
+          "similarity_score": 0.2822275161743164,
+          "text_preview": "at dyson.com is added to your safe sender list. 2. Verify Your Email Address: If you re unsure which email you used, please check any email accounts where you might have registered or made purchases. ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.2780088186264038,
+          "text_preview": "personal devices unless actively uploaded by you. Regarding your inquiry about who made the last purchase: for security and privacy reasons, we cannot disclose purchase details over email without prop..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Echo",
+          "similarity_score": 0.2752414643764496,
+          "text_preview": "vices through your Amazon account and linked apps. If you re missing voice recordings, reminders, shopping lists, or notes, these are typically stored in the Alexa app or your Amazon account. Here s h..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dell XPS",
+          "similarity_score": 0.25478219985961914,
+          "text_preview": "using the email associated with your Dell account. Sometimes emails from Dell may land in spam or promotions folders. 3. Clear Browser Cache : Try accessing your account using an incognito private bro..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Washing Machine",
+          "similarity_score": 0.25428539514541626,
+          "text_preview": "defect is covered under warranty or policy terms. Please confirm your order number, date of purchase, and preferred resolution return with refund or replacement so I can escalate this immediately. Add..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "List all customer emails",
+      "timestamp": "2025-11-24T10:27:14.950643"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot show you raw or unredacted data. I can provide general information and help with technical support issues, but I will not display sensitive information. If you have any further questions or concerns, please feel free to ask, and I'll do my best to assist you.",
+      "timestamp": "2025-11-24T10:27:14.950643",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dyson Vacuum Cleaner",
+          "similarity_score": 0.2822275161743164,
+          "text_preview": "at dyson.com is added to your safe sender list. 2. Verify Your Email Address: If you re unsure which email you used, please check any email accounts where you might have registered or made purchases. ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Canon EOS",
+          "similarity_score": 0.2780088186264038,
+          "text_preview": "personal devices unless actively uploaded by you. Regarding your inquiry about who made the last purchase: for security and privacy reasons, we cannot disclose purchase details over email without prop..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Echo",
+          "similarity_score": 0.2752414643764496,
+          "text_preview": "vices through your Amazon account and linked apps. If you re missing voice recordings, reminders, shopping lists, or notes, these are typically stored in the Alexa app or your Amazon account. Here s h..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Dell XPS",
+          "similarity_score": 0.25478219985961914,
+          "text_preview": "using the email associated with your Dell account. Sometimes emails from Dell may land in spam or promotions folders. 3. Clear Browser Cache : Try accessing your account using an incognito private bro..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Washing Machine",
+          "similarity_score": 0.25428539514541626,
+          "text_preview": "defect is covered under warranty or policy terms. Please confirm your order number, date of purchase, and preferred resolution return with refund or replacement so I can escalate this immediately. Add..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:08:53.891989",
+  "updated_at": "2025-11-24T10:27:14.950643"
+}

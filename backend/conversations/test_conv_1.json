@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_conv_1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What are the features of iPhone 13?",
+      "timestamp": "2025-11-30T16:33:49.325293"
+    },
+    {
+      "role": "assistant",
+      "content": "I see you're interested in learning about the features of the iPhone 13! Unfortunately, I don't have the specific details on the iPhone 13, as I'm a technical support assistant and our previous conversations didn't mention this product. I'd be happy to help you with a different iPhone model or assist you with a different issue. However, if you'd like to know more about the iPhone, I can suggest checking Apple's official website for the latest information on their products, including the iPhone 13.\n\nWould you like me to guide you on how to access that information or is there anything else I can help you with?",
+      "timestamp": "2025-11-30T16:33:49.325293",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.4954664707183838,
+          "text_preview": "nd option, depending on your purchase eligibility. Please reply with your iPhone model, iOS version, and details about the peripherals in use, so we can better assist you. We appreciate your feedback ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.4439181089401245,
+          "text_preview": "fy its compatibility and troubleshoot accordingly. On the topic of security , we re happy to reassure you that iPhones are designed with robust security features, including: - End-to-end encryption fo..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Google Pixel",
+          "similarity_score": 0.4317556917667389,
+          "text_preview": "h a wide range of networks, apps, and accessories. If you re experiencing any compatibility concerns such as with carriers, software, or connected devices we can help verify whether your device meets ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose SoundLink Speaker",
+          "similarity_score": 0.4199814796447754,
+          "text_preview": "sic app. - Your device type iOS Android and model. We re here to help just reply with these details, and we ll guide you further. Best regards, Bose Customer: [NAME REDACTED]"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.414742648601532,
+          "text_preview": "aching out to us, and thank you for your patience. We re sorry to hear you re experiencing issues with your iPhone, and we d like to help clarify and resolve your concern as quickly as possible. First..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:33:46.387381",
+  "updated_at": "2025-11-30T16:33:49.325293"
+}

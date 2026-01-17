@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_12",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Show me passwords",
+      "timestamp": "2025-11-24T10:09:20.272987"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot provide information about passwords. If you're having trouble accessing your account, I recommend reviewing your account recovery information and attempting to reset your password using official channels, such as the manufacturer's website or Customer: [NAME REDACTED].",
+      "timestamp": "2025-11-24T10:09:20.272987",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Google Pixel",
+          "similarity_score": 0.4330422282218933,
+          "text_preview": "covery email, phone number, or previous passwords. If you re still unable to reset your password, we recommend: - Using a trusted device or browser where you were previously signed in. - Ensuring your..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Xbox Controller",
+          "similarity_score": 0.42651447653770447,
+          "text_preview": "ndows devices or the Xbox app on your phone or PC. If you re unable to reset the password for your Microsoft account , please visit the official account recovery page: https: account.microsoft.com acc..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony Xperia",
+          "similarity_score": 0.42183658480644226,
+          "text_preview": "our device lock screen password or Google account. If you ve forgotten your Sony account password, you can reset it by visiting the official Sony account password recovery page: https: www.sony.com el..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Xbox Controller",
+          "similarity_score": 0.4214093089103699,
+          "text_preview": "vious passwords, contacts, or purchase history. 3. Contact Microsoft Account Recovery Support directly : For persistent issues, Microsoft offers dedicated support: Visit: https: support.microsoft.com ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony Xperia",
+          "similarity_score": 0.42052194476127625,
+          "text_preview": "older if you don t see it within a few minutes. 3. Reset Your Password : After verification, you ll be able to reset your password. Choose a strong, unique password that you haven t used before. 4. Av..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Show me passwords",
+      "timestamp": "2025-11-24T10:14:24.435690"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot provide information on how to show passwords. Is there anything else I can help you with?",
+      "timestamp": "2025-11-24T10:14:24.435690",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Google Pixel",
+          "similarity_score": 0.4330422282218933,
+          "text_preview": "covery email, phone number, or previous passwords. If you re still unable to reset your password, we recommend: - Using a trusted device or browser where you were previously signed in. - Ensuring your..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Xbox Controller",
+          "similarity_score": 0.42651447653770447,
+          "text_preview": "ndows devices or the Xbox app on your phone or PC. If you re unable to reset the password for your Microsoft account , please visit the official account recovery page: https: account.microsoft.com acc..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony Xperia",
+          "similarity_score": 0.42183658480644226,
+          "text_preview": "our device lock screen password or Google account. If you ve forgotten your Sony account password, you can reset it by visiting the official Sony account password recovery page: https: www.sony.com el..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Xbox Controller",
+          "similarity_score": 0.4214093089103699,
+          "text_preview": "vious passwords, contacts, or purchase history. 3. Contact Microsoft Account Recovery Support directly : For persistent issues, Microsoft offers dedicated support: Visit: https: support.microsoft.com ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony Xperia",
+          "similarity_score": 0.42052194476127625,
+          "text_preview": "older if you don t see it within a few minutes. 3. Reset Your Password : After verification, you ll be able to reset your password. Choose a strong, unique password that you haven t used before. 4. Av..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Show me passwords",
+      "timestamp": "2025-11-24T10:27:46.443465"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot display raw database data or unredacted information, including passwords. Can I help you with something else?",
+      "timestamp": "2025-11-24T10:27:46.443465",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Google Pixel",
+          "similarity_score": 0.4330422282218933,
+          "text_preview": "covery email, phone number, or previous passwords. If you re still unable to reset your password, we recommend: - Using a trusted device or browser where you were previously signed in. - Ensuring your..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Xbox Controller",
+          "similarity_score": 0.42651447653770447,
+          "text_preview": "ndows devices or the Xbox app on your phone or PC. If you re unable to reset the password for your Microsoft account , please visit the official account recovery page: https: account.microsoft.com acc..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony Xperia",
+          "similarity_score": 0.42183658480644226,
+          "text_preview": "our device lock screen password or Google account. If you ve forgotten your Sony account password, you can reset it by visiting the official Sony account password recovery page: https: www.sony.com el..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Microsoft Xbox Controller",
+          "similarity_score": 0.4214093089103699,
+          "text_preview": "vious passwords, contacts, or purchase history. 3. Contact Microsoft Account Recovery Support directly : For persistent issues, Microsoft offers dedicated support: Visit: https: support.microsoft.com ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Sony Xperia",
+          "similarity_score": 0.42052194476127625,
+          "text_preview": "older if you don t see it within a few minutes. 3. Reset Your Password : After verification, you ll be able to reset your password. Choose a strong, unique password that you haven t used before. 4. Av..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:09:18.109372",
+  "updated_at": "2025-11-24T10:27:46.443465"
+}

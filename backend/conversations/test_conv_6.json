@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_conv_6",
+  "messages": [
+    {
+      "role": "user",
+      "content": "LG Smart TV setup instructions",
+      "timestamp": "2025-11-30T16:34:20.604631"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you with LG Smart TV setup instructions. To get started, could you please provide me with the specific model number of your LG Smart TV? This information is usually found on the back of the unit or in the settings menu.\n\nAdditionally, could you please describe the issue you're experiencing with setting up your LG Smart TV? For example, are you having trouble connecting to the internet, navigating the menu, or setting up Wi-Fi?\n\nWith this information, I can provide you with more specific guidance on how to troubleshoot or set up your LG Smart TV.",
+      "timestamp": "2025-11-30T16:34:20.604631",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.7231222987174988,
+          "text_preview": "tion about the specific issue you re encountering. Could you please clarify: - The exact model number of your LG Smart TV usually found on the back of the unit or in the settings menu - A detailed des..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.7185698747634888,
+          "text_preview": "ially when you were eager to set it up and use it. We re sorry to hear that online tutorials and community forums haven t resolved the issue. However, we d like to clarify: your Ticket ID: [REDACTED] a deli..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.6703927516937256,
+          "text_preview": "you for your patience as we address your concern. We sincerely apologize for the inconvenience you ve experienced with your LG Smart TV. We understand you re encountering a software-related issue and ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.659804105758667,
+          "text_preview": "enience you re experiencing with your LG Smart TV. We understand this is affecting your work and productivity, and we re committed to assisting you promptly."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "LG Smart TV",
+          "similarity_score": 0.6576212644577026,
+          "text_preview": "k you for reaching out to us with Ticket ID: [REDACTED]. We understand that you re experiencing a technical issue with your LG Smart TV, and we sincerely apologize for the inconvenience this has caused. Sin..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:34:18.232370",
+  "updated_at": "2025-11-30T16:34:20.604631"
+}

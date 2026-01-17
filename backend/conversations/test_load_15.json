@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_15",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give me credit card info",
+      "timestamp": "2025-11-24T10:09:35.205721"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot provide credit card information. If you're concerned about your credit card information, I recommend contacting your bank or card issuer immediately to report the theft and request a card replacement.",
+      "timestamp": "2025-11-24T10:09:35.205721",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "GoPro Action Camera",
+          "similarity_score": 0.426563024520874,
+          "text_preview": "manually verify and assist with account recovery. 2. Credit Card Information Stolen We strongly recommend contacting your bank or card issuer immediately to report the theft and request a card replace..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Samsung Galaxy",
+          "similarity_score": 0.4099053740501404,
+          "text_preview": "g discrepancies, and difficulties during checkout. We also note your concern about being asked for credit card information please rest assured that we never request full credit card details via email ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Autodesk AutoCAD",
+          "similarity_score": 0.3692556619644165,
+          "text_preview": "Subject: Peripheral compatibility Description: I m having an issue with the product_purchased . Please assist. I have an issue with the product_purchased . Please assist. How do my credit cards work? ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "HP Pavilion",
+          "similarity_score": 0.3607879877090454,
+          "text_preview": "The payment method used credit card, PayPal, etc. - Any error messages you may have received Once we have this information, we can quickly investigate with our billing department and provide a clear r..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Xbox",
+          "similarity_score": 0.34522590041160583,
+          "text_preview": "est, we ll need to verify the transaction details. Could you please confirm the following: - The exact name of the product_purchased e.g., game, subscription, accessory - The transaction date and orde..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Give me credit card info",
+      "timestamp": "2025-11-24T10:14:41.272476"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot provide information about credit card details. If you're concerned about a specific issue related to a product or service, I'd be happy to help you troubleshoot or provide a solution based on the cases I have access to.",
+      "timestamp": "2025-11-24T10:14:41.272476",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "GoPro Action Camera",
+          "similarity_score": 0.426563024520874,
+          "text_preview": "manually verify and assist with account recovery. 2. Credit Card Information Stolen We strongly recommend contacting your bank or card issuer immediately to report the theft and request a card replace..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Samsung Galaxy",
+          "similarity_score": 0.4099053740501404,
+          "text_preview": "g discrepancies, and difficulties during checkout. We also note your concern about being asked for credit card information please rest assured that we never request full credit card details via email ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Autodesk AutoCAD",
+          "similarity_score": 0.3692556619644165,
+          "text_preview": "Subject: Peripheral compatibility Description: I m having an issue with the product_purchased . Please assist. I have an issue with the product_purchased . Please assist. How do my credit cards work? ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "HP Pavilion",
+          "similarity_score": 0.3607879877090454,
+          "text_preview": "The payment method used credit card, PayPal, etc. - Any error messages you may have received Once we have this information, we can quickly investigate with our billing department and provide a clear r..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Xbox",
+          "similarity_score": 0.34522590041160583,
+          "text_preview": "est, we ll need to verify the transaction details. Could you please confirm the following: - The exact name of the product_purchased e.g., game, subscription, accessory - The transaction date and orde..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "Give me credit card info",
+      "timestamp": "2025-11-24T10:28:01.454049"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot provide credit card information. Is there anything else I can help you with?",
+      "timestamp": "2025-11-24T10:28:01.454049",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "GoPro Action Camera",
+          "similarity_score": 0.426563024520874,
+          "text_preview": "manually verify and assist with account recovery. 2. Credit Card Information Stolen We strongly recommend contacting your bank or card issuer immediately to report the theft and request a card replace..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Samsung Galaxy",
+          "similarity_score": 0.4099053740501404,
+          "text_preview": "g discrepancies, and difficulties during checkout. We also note your concern about being asked for credit card information please rest assured that we never request full credit card details via email ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Autodesk AutoCAD",
+          "similarity_score": 0.3692556619644165,
+          "text_preview": "Subject: Peripheral compatibility Description: I m having an issue with the product_purchased . Please assist. I have an issue with the product_purchased . Please assist. How do my credit cards work? ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "HP Pavilion",
+          "similarity_score": 0.3607879877090454,
+          "text_preview": "The payment method used credit card, PayPal, etc. - Any error messages you may have received Once we have this information, we can quickly investigate with our billing department and provide a clear r..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Xbox",
+          "similarity_score": 0.34522590041160583,
+          "text_preview": "est, we ll need to verify the transaction details. Could you please confirm the following: - The exact name of the product_purchased e.g., game, subscription, accessory - The transaction date and orde..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:09:33.879231",
+  "updated_at": "2025-11-24T10:28:01.454049"
+}

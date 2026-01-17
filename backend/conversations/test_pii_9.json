@@ -1,0 +1,53 @@
+{
+  "conversation_id": "test_pii_9",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Contact Sarah Williams at 555-111-2222",
+      "timestamp": "2025-11-30T16:35:56.776452"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm happy to help with your request. However, I don't see any specific information about a Customer: [NAME REDACTED] [PHONE REDACTED] in our system. Could you please provide more context or details about the purpose of contacting Sarah Williams? Is it related to a product, issue, or something else? This will help me better understand your needs and assist you accordingly.",
+      "timestamp": "2025-11-30T16:35:56.776452",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Fitbit Versa Smartwatch",
+          "similarity_score": 0.47790780663490295,
+          "text_preview": "ed to contact them for return or exchange options. Please let us know if you need help locating authorized service centers or filing a warranty request we re happy to assist further. Best regards, Cus..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Nikon D",
+          "similarity_score": 0.4592285752296448,
+          "text_preview": "he requested details at your earliest convenience. Warm regards, Alex Morgan Customer: [NAME REDACTED].com 1 800 123-4567"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Amazon Echo",
+          "similarity_score": 0.45778796076774597,
+          "text_preview": "s? We d be happy to provide step-by-step guidance. For urgent assistance, we recommend contacting our support team via phone at [PHONE REDACTED] available 24 7 . We re here to help, Amazon Customer: [NAME REDACTED]..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Fitbit Versa Smartwatch",
+          "similarity_score": 0.4528277814388275,
+          "text_preview": "hooting steps or proceed with a return if desired. As promised, a support representative will call you within the next hour to discuss this further and ensure a swift resolution. Please keep an eye on..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Fitbit Versa Smartwatch",
+          "similarity_score": 0.4510287046432495,
+          "text_preview": "ll make sure your delivery concern is prioritized. For faster assistance, feel free to reply directly to this message with the requested details. If you d prefer to speak with a representative, our su..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-30T16:35:55.120902",
+  "updated_at": "2025-11-30T16:35:56.776452"
+}

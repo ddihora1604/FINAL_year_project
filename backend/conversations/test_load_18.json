@@ -1,0 +1,145 @@
+{
+  "conversation_id": "test_load_18",
+  "messages": [
+    {
+      "role": "user",
+      "content": "My email is test@test.com",
+      "timestamp": "2025-11-24T10:09:53.185696"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot provide information that would compromise your account security. If you have authorization, you can check the shipping confirmation email you received from us.",
+      "timestamp": "2025-11-24T10:09:53.185696",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose SoundLink Speaker",
+          "similarity_score": 0.38726097345352173,
+          "text_preview": "with manual verification and unlock your account. In the meantime, please ensure you re using the correct email and avoid further login attempts to prevent additional lockouts. If you don t hear from ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.36613982915878296,
+          "text_preview": "the correct email associated with your account. 2. Reset Your Apple Ticket ID: [REDACTED] Visit iforgot.apple.com https: iforgot.apple.com and follow the prompts to reset your password. You ll be asked to verif..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.35860949754714966,
+          "text_preview": "in. Thank you again for your patience and loyalty! Best regards, Alex Reynolds Customer: [NAME REDACTED].com 1-800-SMASH-PUMP toll-free"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Google Pixel",
+          "similarity_score": 0.34926989674568176,
+          "text_preview": "covery email, phone number, or previous passwords. If you re still unable to reset your password, we recommend: - Using a trusted device or browser where you were previously signed in. - Ensuring your..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.34871453046798706,
+          "text_preview": "or email addresses are linked to your account. 4. Enable Two-Factor Authentication If not already enabled, turn on it on to protect your account from unauthorized access. If you re still unable to sig..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "My email is test@test.com",
+      "timestamp": "2025-11-24T10:15:03.476089"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm happy to help you with your question! Unfortunately, I don't have any specific information about the email address you provided ([EMAIL REDACTED]). As a Customer: [NAME REDACTED], I'm only able to access and reference the cases I have been trained on, and none of the cases I have access to contain information about that specific email address.\n\nIf you're experiencing issues with your email or account, I recommend checking the manufacturer's website, product documentation, or contacting the manufacturer directly for the most up-to-date and accurate information about their email services. Additionally, if you have any further questions or concerns, please don't hesitate to ask, and I'll do my best to assist you with a relevant solution based on the cases I have access to.",
+      "timestamp": "2025-11-24T10:15:03.476089",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose SoundLink Speaker",
+          "similarity_score": 0.38726097345352173,
+          "text_preview": "with manual verification and unlock your account. In the meantime, please ensure you re using the correct email and avoid further login attempts to prevent additional lockouts. If you don t hear from ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.36613982915878296,
+          "text_preview": "the correct email associated with your account. 2. Reset Your Apple Ticket ID: [REDACTED] Visit iforgot.apple.com https: iforgot.apple.com and follow the prompts to reset your password. You ll be asked to verif..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.35860949754714966,
+          "text_preview": "in. Thank you again for your patience and loyalty! Best regards, Alex Reynolds Customer: [NAME REDACTED].com 1-800-SMASH-PUMP toll-free"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Google Pixel",
+          "similarity_score": 0.34926989674568176,
+          "text_preview": "covery email, phone number, or previous passwords. If you re still unable to reset your password, we recommend: - Using a trusted device or browser where you were previously signed in. - Ensuring your..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.34871453046798706,
+          "text_preview": "or email addresses are linked to your account. 4. Enable Two-Factor Authentication If not already enabled, turn on it on to protect your account from unauthorized access. If you re still unable to sig..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    },
+    {
+      "role": "user",
+      "content": "My email is test@test.com",
+      "timestamp": "2025-11-24T10:28:23.010116"
+    },
+    {
+      "role": "assistant",
+      "content": "I'd be happy to help you with your question! However, I noticed that you provided your email address, which is not relevant to the support case. Since you didn't specify any technical issues or questions related to the provided cases, I'm going to assume that you're looking for general information.\n\nAs I mentioned earlier, I'm here to provide technical support assistance, and I'd be happy to help you with any questions or issues you may have with your devices or products. If you're experiencing any technical issues or errors, please feel free to describe them to me, and I'll do my best to assist you.\n\nIf you're looking for general information or have a specific question, please feel free to ask, and I'll do my best to provide helpful guidance or point you in the right direction.",
+      "timestamp": "2025-11-24T10:28:23.010116",
+      "sources": [
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Bose SoundLink Speaker",
+          "similarity_score": 0.38726097345352173,
+          "text_preview": "with manual verification and unlock your account. In the meantime, please ensure you re using the correct email and avoid further login attempts to prevent additional lockouts. If you don t hear from ..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.36613982915878296,
+          "text_preview": "the correct email associated with your account. 2. Reset Your Apple Ticket ID: [REDACTED] Visit iforgot.apple.com https: iforgot.apple.com and follow the prompts to reset your password. You ll be asked to verif..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Roomba Robot Vacuum",
+          "similarity_score": 0.35860949754714966,
+          "text_preview": "in. Thank you again for your patience and loyalty! Best regards, Alex Reynolds Customer: [NAME REDACTED].com 1-800-SMASH-PUMP toll-free"
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "Google Pixel",
+          "similarity_score": 0.34926989674568176,
+          "text_preview": "covery email, phone number, or previous passwords. If you re still unable to reset your password, we recommend: - Using a trusted device or browser where you were previously signed in. - Ensuring your..."
+        },
+        {
+          "ticket_id": "[REDACTED]",
+          "product": "iPhone",
+          "similarity_score": 0.34871453046798706,
+          "text_preview": "or email addresses are linked to your account. 4. Enable Two-Factor Authentication If not already enabled, turn on it on to protect your account from unauthorized access. If you re still unable to sig..."
+        }
+      ],
+      "security_info": {
+        "status": "passed",
+        "pii_redacted": true
+      }
+    }
+  ],
+  "created_at": "2025-11-24T10:09:51.644600",
+  "updated_at": "2025-11-24T10:28:23.010116"
+}
