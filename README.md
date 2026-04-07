@@ -182,72 +182,6 @@ User Input
 
 ---
 
-## 📁 Directory Structure
-
-```
-FINAL_year_project-rag/
-│
-├── README.md                              # Main project documentation
-├── README-SETUP.md                        # Detailed setup guide
-├── IMPLEMENTATION-SUMMARY.md              # Technical implementation details
-├── requirements.txt                       # Root dependencies
-├── docker-compose.yml                     # Full stack orchestration
-│
-├── 📂 backend/                            # FastAPI application
-│   ├── main.py                           # FastAPI server definition
-│   ├── requirements.txt                  # Python dependencies
-│   ├── Dockerfile                        # Container definition
-│   ├── .env.example                      # Environment template
-│   └── conversations/                    # Stored conversation logs
-│
-├── 📂 frontend/                           # React TypeScript application
-│   ├── src/
-│   │   ├── App.tsx                       # Main app component
-│   │   ├── index.tsx                     # Entry point
-│   │   ├── components/Navbar.tsx         # Navigation bar
-│   │   └── pages/
-│   │       ├── ChatPage.tsx             # Chat interface
-│   │       └── DashboardPage.tsx        # Monitoring dashboard
-│   ├── package.json                     # npm dependencies
-│   ├── tsconfig.json                    # TypeScript config
-│   ├── Dockerfile                       # Container definition
-│   └── nginx.conf                       # Reverse proxy config
-│
-├── 📂 RAG-Pipeline/                       # Basic RAG implementation
-│   ├── rag_pipeline.py                  # Core RAG logic
-│   ├── example_usage.py                 # Demo script
-│   └── customer_support_sample_1500_balanced.csv
-│
-├── 📂 RAG-Pipeline-Ollama/                # Production RAG with Ollama
-│   ├── rag_pipeline_secure.py           # Secure RAG with PII redaction
-│   ├── security.py                      # Security & PII redaction module
-│   ├── customer_support_kb.faiss        # Pre-built vector index
-│   └── test_prompts.md                  # Test cases
-│
-├── 📂 Health-Security-Metrics/            # Prometheus monitoring
-│   ├── instrumentation.py               # RAGMonitor implementation
-│   ├── prometheus.yml                   # Prometheus config
-│   ├── QUICKSTART.md                    # Quick setup guide
-│   └── verify_setup.py                  # Verification script
-│
-├── 📂 grafana-dashboards/                 # Pre-built dashboards
-│   ├── 1-executive-overview.json        # Business metrics
-│   ├── 2-security-operations.json       # Security monitoring
-│   ├── 3-performance-dashboard.json     # Performance metrics
-│   └── 4-quality-dashboard.json         # Quality metrics
-│
-├── 📂 Docs/                               # Documentation
-│   ├── 01-PII-Redaction-Implementation.md
-│   ├── 02-Health-Security-Metrics.md
-│   └── 03-Grafana-Dashboard-Panels.md
-│
-└── 📂 Dataset/                            # Data processing utilities
-    ├── customer_support_tickets_4330.csv
-    └── dataset_operations.py
-```
-
----
-
 ## 🔧 Installation Prerequisites & Setup
 
 ### System Requirements
@@ -369,6 +303,16 @@ rag_pii_redactions_total
 3. **Performance Analytics**: Latency & throughput
 4. **Quality Metrics**: Response accuracy
 
+#### Dashboard Screenshots
+
+**Executive Overview & Security Operations Dashboards:**
+
+![Executive Overview & Security Operations](Executive-Security.png)
+
+**Performance Analytics & Quality Metrics Dashboards:**
+
+![Performance Analytics & Quality Metrics](Performance-Quality.png)
+
 ### Access Grafana
 1. Open http://localhost:3001
 2. Login: `admin` / `admin`
@@ -443,3 +387,67 @@ curl http://localhost:8000/metrics | head -20
 ```
 
 ---
+
+## 📁 Directory Structure
+
+```
+FINAL_year_project-rag/
+│
+├── README.md                              # Main project documentation
+├── README-SETUP.md                        # Detailed setup guide
+├── IMPLEMENTATION-SUMMARY.md              # Technical implementation details
+├── requirements.txt                       # Root dependencies
+├── docker-compose.yml                     # Full stack orchestration
+│
+├── 📂 backend/                            # FastAPI application
+│   ├── main.py                           # FastAPI server definition
+│   ├── requirements.txt                  # Python dependencies
+│   ├── Dockerfile                        # Container definition
+│   ├── .env.example                      # Environment template
+│   └── conversations/                    # Stored conversation logs
+│
+├── 📂 frontend/                           # React TypeScript application
+│   ├── src/
+│   │   ├── App.tsx                       # Main app component
+│   │   ├── index.tsx                     # Entry point
+│   │   ├── components/Navbar.tsx         # Navigation bar
+│   │   └── pages/
+│   │       ├── ChatPage.tsx             # Chat interface
+│   │       └── DashboardPage.tsx        # Monitoring dashboard
+│   ├── package.json                     # npm dependencies
+│   ├── tsconfig.json                    # TypeScript config
+│   ├── Dockerfile                       # Container definition
+│   └── nginx.conf                       # Reverse proxy config
+│
+├── 📂 RAG-Pipeline/                       # Basic RAG implementation
+│   ├── rag_pipeline.py                  # Core RAG logic
+│   ├── example_usage.py                 # Demo script
+│   └── customer_support_sample_1500_balanced.csv
+│
+├── 📂 RAG-Pipeline-Ollama/                # Production RAG with Ollama
+│   ├── rag_pipeline_secure.py           # Secure RAG with PII redaction
+│   ├── security.py                      # Security & PII redaction module
+│   ├── customer_support_kb.faiss        # Pre-built vector index
+│   └── test_prompts.md                  # Test cases
+│
+├── 📂 Health-Security-Metrics/            # Prometheus monitoring
+│   ├── instrumentation.py               # RAGMonitor implementation
+│   ├── prometheus.yml                   # Prometheus config
+│   ├── QUICKSTART.md                    # Quick setup guide
+│   └── verify_setup.py                  # Verification script
+│
+├── 📂 grafana-dashboards/                 # Pre-built dashboards
+│   ├── 1-executive-overview.json        # Business metrics
+│   ├── 2-security-operations.json       # Security monitoring
+│   ├── 3-performance-dashboard.json     # Performance metrics
+│   └── 4-quality-dashboard.json         # Quality metrics
+│
+├── 📂 Docs/                               # Documentation
+│   ├── 01-PII-Redaction-Implementation.md
+│   ├── 02-Health-Security-Metrics.md
+│   └── 03-Grafana-Dashboard-Panels.md
+│
+└── 📂 Dataset/                            # Data processing utilities
+    ├── customer_support_tickets_4330.csv
+    └── dataset_operations.py
+```
