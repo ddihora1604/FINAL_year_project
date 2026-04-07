@@ -1,4 +1,4 @@
-# RAG Pipeline for Customer Support
+# DataSentinel: A Whitebox LLMOps Framework for Secure PII Redaction in RAG Pipelines
 
 This project implements a Retrieval-Augmented Generation (RAG) pipeline for customer support using the provided CSV dataset.
 
