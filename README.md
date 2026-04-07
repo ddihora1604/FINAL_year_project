@@ -1,30 +1,6 @@
-# 🚀 DataSentinel: A Whitebox LLMOps Framework for Secure PII Redaction in RAG Pipelines
+# DataSentinel: A Whitebox LLMOps Framework for Secure PII Redaction in RAG Pipelines
 
 > A comprehensive, production-ready Retrieval-Augmented Generation (RAG) chatbot system integrated with enterprise-grade security, monitoring, and administration capabilities for secure customer support interactions.
-
-![Architecture](https://img.shields.io/badge/Architecture-Microservices-blue?style=flat-square)
-![Security](https://img.shields.io/badge/Security-PII%20Redaction-red?style=flat-square)
-![Monitoring](https://img.shields.io/badge/Monitoring-Prometheus%20%2B%20Grafana-green?style=flat-square)
-![Framework](https://img.shields.io/badge/Framework-FastAPI%20%2B%20React-yellowgreen?style=flat-square)
-
----
-
-## 📋 Table of Contents
-
-- [Problem Statement](#problem-statement)
-- [Project Overview](#project-overview)
-- [Key Features](#key-features)
-- [Architecture Diagram](#architecture-diagram)
-- [Key Concepts & Technologies](#key-concepts--technologies)
-- [Directory Structure](#directory-structure)
-- [Installation Prerequisites & Setup](#installation-prerequisites--setup)
-- [Quick Start](#quick-start)
-- [API Documentation](#api-documentation)
-- [RAG Pipeline Implementation](#rag-pipeline-implementation)
-- [PII Redaction System](#pii-redaction-system)
-- [Monitoring with Prometheus & Grafana](#monitoring-with-prometheus--grafana)
-- [Usage Examples](#usage-examples)
-- [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -38,15 +14,6 @@ Customer support teams face critical challenges in delivering fast, accurate, an
 2. **Privacy Concerns**: Traditional chatbots risk exposing Personally Identifiable Information (PII) in responses, leading to compliance violations and security breaches
 3. **Transparency Gap**: Lack of visibility into system behavior, security incidents, and performance metrics makes it difficult to maintain reliability and compliance
 4. **Security Risks**: Vulnerability to prompt injection attacks and adversarial inputs that could manipulate the AI to behave unexpectedly
-
-### Solution
-
-This project delivers a secure, observable RAG-powered chatbot system that:
-- ✅ Automatically retrieves relevant answers from customer support knowledge bases
-- ✅ Redacts PII in real-time before responses reach users
-- ✅ Provides comprehensive monitoring and threat detection
-- ✅ Enables seamless conversation management and message export
-- ✅ Demonstrates enterprise-grade security best practices
 
 ---
 
@@ -109,100 +76,7 @@ The system:
 - **Security Alerts**: Visual indicators for PII redaction events
 - **Responsive Design**: Works on desktop and mobile devices
 
-### 🛠️ Developer Experience
-- **Docker Containerization**: One-command deployment
-- **Modular Architecture**: Clean separation of concerns
-- **Comprehensive Logging**: Detailed logs for debugging
-- **API Documentation**: OpenAPI/Swagger endpoints
-- **Configuration Management**: Environment-based settings
-
 ---
-
-## 🏗️ Architecture Diagram
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                       USER INTERFACE LAYER                       │
-│  ┌──────────────────────────────────────────────────────────┐   │
-│  │  React Frontend (Port 3000)                              │   │
-│  │  - Chat Component                                        │   │
-│  │  - Conversation Manager                                  │   │
-│  │  - Security Alert Display                                │   │
-│  │  - Dashboard with Grafana Panels                          │   │
-│  └────────────────┬─────────────────────────────────────────┘   │
-└───────────────────┼─────────────────────────────────────────────┘
-                    │ WebSocket + REST API
-                    ↓
-┌─────────────────────────────────────────────────────────────────┐
-│                      APPLICATION LAYER                           │
-│  ┌──────────────────────────────────────────────────────────┐   │
-│  │  FastAPI Backend (Port 8000)                             │   │
-│  │  ┌────────────────────────────────────────────────────┐  │   │
-│  │  │ REST Endpoints:                                    │  │   │
-│  │  │ - POST /chat           (Send message)             │  │   │
-│  │  │ - GET /conversations   (List chats)               │  │   │
-│  │  │ - GET /metrics         (System metrics)            │  │   │
-│  │  │ - WebSocket /ws/chat   (Real-time updates)        │  │   │
-│  │  └────────────────────────────────────────────────────┘  │   │
-│  └────┬──────────────────────────────────────────────────────┘   │
-└───────┼──────────────────────────────────────────────────────────┘
-        │
-        ├─────────────────────┬──────────────────────┐
-        ↓                     ↓                      ↓
-┌──────────────────┐ ┌──────────────────┐ ┌──────────────────┐
-│  RAG PIPELINE    │ │ SECURITY ENGINE  │ │   MONITORING     │
-├──────────────────┤ ├──────────────────┤ ├──────────────────┤
-│ ┌──────────────┐ │ │ ┌──────────────┐ │ │ ┌──────────────┐ │
-│ │ Input Query  │ │ │ │ PII Detector │ │ │ │ RAGMonitor   │ │
-│ └──────┬───────┘ │ │ └──────┬───────┘ │ │ └──────┬───────┘ │
-│        ↓         │ │        ↓         │ │        ↓         │
-│ ┌──────────────┐ │ │ ┌──────────────┐ │ │ ┌──────────────┐ │
-│ │Preprocessor  │ │ │ │Regex Patterns│ │ │ │Metrics Export│ │
-│ └──────┬───────┘ │ │ └──────┬───────┘ │ │ └──────┬───────┘ │
-│        ↓         │ │        ↓         │ │        ↓         │
-│ ┌──────────────┐ │ │ ┌──────────────┐ │ │ ┌──────────────┐ │
-│ │Embeddings    │ │ │ │Redactor      │ │ │ │/metrics (9090)
-│ │Generator     │ │ │ └──────┬───────┘ │ │ └──────────────┘ │
-│ └──────┬───────┘ │ │        ↓         │ │                  │
-│        ↓         │ │ ┌──────────────┐ │ │                  │
-│ ┌──────────────┐ │ │ │Redacted Text │ │ │                  │
-│ │FAISS Vector  │ │ │ └──────────────┘ │ │                  │
-│ │Store Lookup  │ │ │                  │ │                  │
-│ └──────┬───────┘ │ │                  │ │                  │
-│        ↓         │ │                  │ │                  │
-│ ┌──────────────┐ │ │                  │ │                  │
-│ │Context Docs  │ │ │                  │ │                  │
-│ └──────┬───────┘ │ │                  │ │                  │
-│        ↓         │ │                  │ │                  │
-│ ┌──────────────┐ │ │                  │ │                  │
-│ │LLM Prompt    │ │ │                  │ │                  │
-│ │Generation    │ │ │                  │ │                  │
-│ └──────┬───────┘ │ │                  │ │                  │
-│        ↓         │ │                  │ │                  │
-│ ┌──────────────┐ │ │                  │ │                  │
-│ │Ollama Call   │ │ │                  │ │                  │
-│ │(Llama 3.2)   │ │ │                  │ │                  │
-│ └──────────────┘ │ │                  │ │                  │
-└──────────────────┘ └──────────────────┘ └──────────────────┘
-        │                    │                     │
-        └────────┬───────────┴──────────┬──────────┘
-                 ↓                     ↓
-        ┌───────────────────┐  ┌──────────────────┐
-        │  Conversation DB  │  │ Prometheus Store │
-        │  (JSON logs)      │  │ (Time Series)    │
-        └───────────────────┘  └──────────────────┘
-                                         ↑
-                                    Scrape /metrics
-                                    every 5 seconds
-                                         │
-                            ┌────────────┴──────────────┐
-                            ↓                          ↓
-                    ┌──────────────────┐      ┌──────────────────┐
-                    │  Prometheus      │      │    Grafana       │
-                    │  (Port 9090)     │      │    (Port 3001)   │
-                    │ Time-series DB   │      │  Visualization   │
-                    └──────────────────┘      └──────────────────┘
-```
 
 ### Data Flow During a Query
 
@@ -225,6 +99,18 @@ User Input
     ↓
 [Response + Sources + Security Info] → User
 ```
+---
+
+## 🔐 PII Redaction System
+
+### Supported Entities
+
+| Entity | Example | Replacement |
+|--------|---------|-------------|
+| Email | `john@example.com` | `[EMAIL_ADDRESS]` |
+| Phone | `555-1234` | `[PHONE_NUMBER]` |
+| Credit Card | `4532-1234-5678-9010` | `[CREDIT_CARD]` |
+| SSN | `123-45-6789` | `[SSN]` |
 
 ---
 
@@ -467,90 +353,6 @@ curl -X POST http://localhost:8000/api/chat \
 
 ---
 
-## 📡 API Documentation
-
-### Chat Endpoint
-```http
-POST /api/chat
-Content-Type: application/json
-
-{
-  "message": "How do I reset my password?",
-  "conversation_id": "optional-uuid"
-}
-```
-
-**Response**:
-```json
-{
-  "conversation_id": "550e8400-e29b-41d4-a716-446655440000",
-  "response": "To reset your password, visit [REDACTED_LINK]...",
-  "sources": [{"document": "FAQ: Password Reset", "score": 0.95}],
-  "security_info": {
-    "pii_detected": true,
-    "redactions": ["[EMAIL_ADDRESS]", "[ACCOUNT_ID]"]
-  }
-}
-```
-
----
-
-## 🧠 RAG Pipeline Implementation
-
-### Architecture
-```python
-RAGPipeline
-├── DataProcessor
-├── EmbeddingGenerator
-├── VectorStore (FAISS)
-└── LLMIntegration (Ollama)
-```
-
-### Usage
-```python
-from rag_pipeline_secure import RAGPipeline, RAGConfig
-
-config = RAGConfig(
-    embedding_model="all-MiniLM-L6-v2",
-    ollama_model="llama3.2",
-    top_k=5
-)
-
-rag = RAGPipeline(config)
-rag.load_and_process_data("customer_support_tickets.csv")
-rag.build_vector_store()
-
-response = rag.generate_response(query, security_check=True)
-```
-
----
-
-## 🔐 PII Redaction System
-
-### Supported Entities
-
-| Entity | Example | Replacement |
-|--------|---------|-------------|
-| Email | `john@example.com` | `[EMAIL_ADDRESS]` |
-| Phone | `555-1234` | `[PHONE_NUMBER]` |
-| Credit Card | `4532-1234-5678-9010` | `[CREDIT_CARD]` |
-| SSN | `123-45-6789` | `[SSN]` |
-
-### Code Integration
-```python
-from security import SecurityManager
-
-security_mgr = SecurityManager()
-
-# Validate input
-validation = security_mgr.validate_input(user_query)
-
-# Redact output
-redacted = security_mgr.redact_pii(response_text)
-```
-
----
-
 ## 📊 Monitoring with Prometheus & Grafana
 
 ### Key Metrics
@@ -573,116 +375,6 @@ rag_pii_redactions_total
 3. Go to Dashboards → RAG Pipeline
 
 ---
-
-## 💡 Usage Examples
-
-### Example 1: Basic Chat
-```python
-import requests
-
-response = requests.post(
-    "http://localhost:8000/api/chat",
-    json={"message": "How do I update my payment method?"}
-)
-
-data = response.json()
-print(f"Response: {data['response']}")
-```
-
-### Example 2: Export Conversation
-```bash
-curl http://localhost:8000/api/conversations/{id}/export -o chat.json
-```
-
-### Example 3: Monitor Metrics
-```bash
-curl http://localhost:8000/metrics | head -20
-```
-
----
-
-## 🆘 Troubleshooting
-
-### Ollama Connection Error
-```bash
-ollama serve  # Ensure Ollama is running
-```
-
-### Port Already in Use
-```bash
-lsof -i :8000   # macOS/Linux
-netstat -ano | findstr :8000  # Windows
-```
-
-### FAISS Index Not Found
-```python
-rag.load_and_process_data("customer_support_tickets.csv")
-rag.build_vector_store()
-```
-
-### Check Logs
-```bash
-docker-compose logs -f backend
-docker-compose logs -f prometheus
-```
-
----
-
-## 📚 Additional Resources
-
-- [Full Setup Guide](README-SETUP.md)
-- [Implementation Details](IMPLEMENTATION-SUMMARY.md)
-- [PII Redaction Deep Dive](Docs/01-PII-Redaction-Implementation.md)
-- [Monitoring Guide](Docs/02-Health-Security-Metrics.md)
-
----
-
-**Last Updated**: April 2026 | **Version**: 1.0.0
-
-The pipeline is optimized for:
-- **Fast Retrieval**: Sub-second query response times
-- **Memory Efficiency**: Optimized embedding storage
-- **Scalability**: Can handle datasets with thousands of documents
-- **Accuracy**: High-quality semantic matching
-
-## Customization
-
-### Using Different Models
-
-```python
-# Use a different sentence transformer model
-rag = RAGPipeline(model_name='paraphrase-MiniLM-L12-v2')
-```
-
-### Adjusting Search Parameters
-
-```python
-# Get more or fewer results
-results = rag.search("query", top_k=10)
-```
-
-### Custom Preprocessing
-
-Modify the `preprocess_text` method in `RAGPipeline` class for custom text processing.
-
-## Dependencies
-
-- pandas: Data manipulation
-- numpy: Numerical operations
-- sentence-transformers: Text embedding generation
-- faiss-cpu: Vector similarity search
-- scikit-learn: Additional ML utilities
-- torch: PyTorch backend for transformers
-
-## Future Enhancements
-
-- [ ] Add support for different embedding models
-- [ ] Implement query expansion techniques
-- [ ] Add evaluation metrics
-- [ ] Support for multiple languages
-- [ ] Integration with generative models for complete RAG
-
-## Phase 3: Health & Security Metrics
 
 ### Setup Monitoring Stack
 
@@ -717,16 +409,37 @@ Modify the `preprocess_text` method in `RAGPipeline` class for custom text proce
    python rag_pipeline_secure.py
    ```
 
-### Access Points
+#### Access Points
 
 - **Metrics**: http://localhost:8000/metrics
 - **Prometheus**: http://localhost:9090
 - **Grafana**: http://localhost:3000 (admin/admin)
 
-### Quick Troubleshooting
+---
 
-- **Docker error**: Ensure Docker Desktop is running
-- **No data in Grafana**: Check Prometheus targets at http://localhost:9090/targets
-- **Port conflicts**: Stop containers with `docker-compose down` and restart
+### 💡 Usage Examples
 
-See [Health-Security-Metrics/QUICKSTART.md](Health-Security-Metrics/QUICKSTART.md) for detailed setup instructions.
+#### Example 1: Basic Chat
+```python
+import requests
+
+response = requests.post(
+    "http://localhost:8000/api/chat",
+    json={"message": "How do I update my payment method?"}
+)
+
+data = response.json()
+print(f"Response: {data['response']}")
+```
+
+#### Example 2: Export Conversation
+```bash
+curl http://localhost:8000/api/conversations/{id}/export -o chat.json
+```
+
+#### Example 3: Monitor Metrics
+```bash
+curl http://localhost:8000/metrics | head -20
+```
+
+---
