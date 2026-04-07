@@ -8,9 +8,9 @@
 
 ### 🎬 Watch Demo & Overview
 
-[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Now-red?style=for-the-badge&logo=youtube&logoColor=white)](https://studio.youtube.com/channel/UCMMhsuAS67lfmgpqsexPkEg/videos/upload?d=ud&filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D)
+[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Now-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/rQS-HDe19mU?si=36y0_opRgbQaqCsp)
 
-<sub>Click the badge above to watch the full project demo on YouTube</sub>
+<sub>Click the badge above to watch the full project demo</sub>
 
 </div>
 
