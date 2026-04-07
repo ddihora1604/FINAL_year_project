@@ -4,6 +4,18 @@
 
 ---
 
+<div align="center">
+
+### 🎬 Watch Demo & Overview
+
+[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Now-red?style=for-the-badge&logo=youtube&logoColor=white)](https://studio.youtube.com/channel/UCMMhsuAS67lfmgpqsexPkEg/videos/upload?d=ud&filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D)
+
+<sub>Click the badge above to watch the full project demo on YouTube</sub>
+
+</div>
+
+---
+
 ## ❓ Problem Statement
 
 ### Challenge
@@ -303,7 +315,7 @@ rag_pii_redactions_total
 3. **Performance Analytics**: Latency & throughput
 4. **Quality Metrics**: Response accuracy
 
-#### Dashboard Screenshots
+### Dashboard Screenshots
 
 **Executive Overview & Security Operations Dashboards:**
 
