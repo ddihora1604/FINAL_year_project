@@ -6,7 +6,7 @@
 
 <div align="center">
 
-### 🎬 Watch Demo & Overview
+### 🎬 Watch Demo
 
 [![YouTube](https://img.shields.io/badge/YouTube-Watch%20Now-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/rQS-HDe19mU?si=36y0_opRgbQaqCsp)
 
